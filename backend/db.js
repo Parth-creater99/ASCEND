@@ -8,6 +8,7 @@ export const connectDB = async () => {
     console.log(`MongoDB Connected: ${conn.connection.host}`);
   } catch (error) {
     console.error(`Error connecting to MongoDB: ${error.message}`);
-    process.exit(1);
+    console.error("Please check your MONGO_URI environment variable on Render!");
+    // Do not exit process, let Express continue running so it can serve API errors instead of 502s
   }
 };
