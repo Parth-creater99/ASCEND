@@ -5,7 +5,6 @@ import React, { useState, useEffect, useRef } from 'react';
 // ==========================================
 const TRANSLATIONS = {
   "en": {
-
     "dashboard": "Dashboard",
     "timer": "Focus Timer",
     "tasks": "Tasks Queue",
@@ -123,9 +122,1311 @@ const TRANSLATIONS = {
     "profileSetup": "{t('profileSetup')}",
     "uploadRealPhoto": "{t('uploadRealPhoto')}",
     "famousCharacterAvatar": "{t('famousCharacterAvatar')}"
-  
+  },
+  "mr": {
+    "dashboard": "ड�&शब�9र्ड",
+    "timer": "ए�"ा�्रता �xायमर",
+    "tasks": "�"ार्य स��a६",
+    "disciplines": "शिस्त व विद्याशा�ा",
+    "analytics": "स��9ल विश्ल�!षण",
+    "friends": "�&भ्यास म�डळ",
+    "rewards": "ब�"्ष६स भा�डार",
+    "themes": "थ६म म�&�x्रि�"्स",
+    "settings": "स�!�xि��्�S",
+    "enterSystem": "प्रणाल६मध्य�! प्रव�!श �"रा",
+    "welcomeBack": "द��नि�" ए�"ा�्रता �"�9�xा स�"्रिय.",
+    "buildLegacy": "� पला वारसा ��डवा",
+    "online": "स�"्रिय (�नला�!न)",
+    "dailyTelemetry": "द��नि�" ए�"ा�्रता �x�!ल६म�!�x्र६",
+    "focusDurationWeek": "साप्ताहि�" �&भ्यास �"ालावध६",
+    "productivityTimer": "�0त्पाद�"ता ए�"ा�्रता �xायमर",
+    "todaysTasks": "� �S�a्या प्राधान्य �"ार्या��a६ स��a६",
+    "addTask": "+ �"ार्य �S�9डा",
+    "newFocusTask": "नव६न �"ार्य",
+    "queueEmpty": "�"ार्य स��a६ सध्या रि�"ाम६ � ह�!",
+    "queueEmptyDesc": "� पल�! महाविद्यालय६न �&भ्यास�"्रम, प्रश्नस��a �"ि�वा प्र�"ल्प �S�9डा. प्रविष्�x �"�!ल�!ल�! �"ार्य �"ायमस्वर�प६ �Sतन �"�!ल�! �Sातात.",
+    "createFirstTask": "+ पहिल�! �"ार्य तयार �"रा",
+    "studyCircleEmpty": "� पल�! �&भ्यास म�डळ प्रत६�"्ष�!त � ह�!",
+    "studyCircleEmptyDesc": "ए�"त्र �&भ्यास �"रण्यासाठ६ � णि �ात्र६श६र प्र�त६ सामायि�" �"रण्यासाठ६ @username द्वार�! वर्�मित्रा�ना �S�9डा.",
+    "addFriend": "मित्र �S�9डा",
+    "sendRequest": "विन�त६ पाठवा",
+    "pendingRequests": "प्रल�बित मित्र विन�त्या",
+    "accept": "स्व६�"ारा",
+    "decline": "ना�"ारा",
+    "kudosSent": "�0त्साहवर्धन पाठवल�!!",
+    "sendHighFive": "हाय-फा�!व्ह पाठवा",
+    "fullRecord": "श���"्षणि�" न�9�द �x्रान्स�"्रिप्�x",
+    "totalHours": "ए�"�ण �&भ्यास तास",
+    "tasksCompleted": "प�र्ण �"�!ल�!ल६ �"ार्य�!",
+    "consistencyGrade": "सुस��तता �ुणा��"न",
+    "level": "पातळ६ (Level)",
+    "pomodoro": "प�9म�9ड�9र�9",
+    "deepWork": "�हन �&भ्यास",
+    "flowState": "प्रवाह स्थित६",
+    "break": "विश्रा�त६",
+    "reset": "र६स�!�x �"रा",
+    "startSession": "सत्र सुर� �"रा",
+    "pauseSession": "सत्र था�बवा",
+    "ambientMode": "शा�त प�र्णस्�"्र६न म�9ड",
+    "exitAmbient": "स्�"्र६नमध�न बाह�!र पडा",
+    "settingsTitle": "प्रणाल६ � णि प्र�9फा�!ल स�!�xि��्�S",
+    "profileTab": "प्र�9फा�!ल",
+    "appearanceTab": "स्वर�प � णि थ६म",
+    "languageTab": "भाषा (Language)",
+    "audioTab": "ध्वन६ स�!�xि��्�S",
+    "dataTab": "ड�!�xा � णि ब�&�"�&प",
+    "serverTab": "सर्व्हर � णि न�!�xवर्�"",
+    "fullName": "प�र्ण नाव",
+    "usernameHandle": "युझरन�!म हँडल (@)",
+    "bioMission": "श���"्षणि�" बाय�9 � णि ध्य�!य",
+    "university": "महाविद्यालय / विद्याप६ठ",
+    "degreeBranch": "पदव६ / शा�ा",
+    "academicYear": "श���"्षणि�" वर्ष / सत्र",
+    "uploadPhoto": "प६स६मध�न फ�9�x�9 �&पल�9ड �"रा",
+    "saveChanges": "बदल �Sतन �"रा",
+    "darkMode": "डार्�" �ल�!ड म�!श",
+    "lightMode": "स्व�a्�: ल�"्झर६ ला�!�x",
+    "exportBackup": "JSON ब�&�"�&प डा�0नल�9ड �"रा",
+    "importBackup": "JSON ब�&�"�&प �&पल�9ड �"रा",
+    "resetData": "�&�&प ड�!�xा र६स�!�x �"रा",
+    "serverConnected": "स्थानि�" सर्व्हर �S�9डला ��!ला (Port 3001)",
+    "notificationsTitle": "स��aना � णि स्मरणपत्र�!",
+    "allNotifications": "सर्व स��aना",
+    "socialAlerts": "सामा�Sि�" � णि मित्र",
+    "reminderAlerts": "�"ार्य स्मरणपत्र�!",
+    "systemAlerts": "सिस्�xम �&लर्�x",
+    "noNotifications": "सध्या �"�9णत्याह६ स��aना नाह६त",
+    "noNotificationsDesc": "�S�!व्हा मित्र विन�त्या, स्मरणपत्र�! �"ि�वा �&भ्यास �xप्प�! य�!त६ल त�!व्हा त�! य�!थ�! दिसत६ल.",
+    "markAllRead": "सर्व वा�aल�! म्हण�न �aिन्हा��"ित �"रा",
+    "clearAll": "सर्व साफ �"रा",
+    "enableDesktopAlerts": "ड�!स्�"�x�0प स��aना स�"्षम �"रा",
+    "desktopAlertsActive": "ड�!स्�"�x�0प स��aना स�"्रिय � ह�!त",
+    "scheduleReminder": "स्मरणपत्र श�!ड्युल �"रा",
+    "noReminder": "स्मरणपत्र नाह६",
+    "snooze10m": "१० मिनि�x�! पुढ�! ढ�"ला",
+    "markDone": "प�र्ण झाल�! (+XP)",
+    "testNotification": "�aा�aण६ स��aना पाठवा",
+    "notificationsTab": "स��aना � णि स्मरणपत्र�!",
+    "inactivityAlert": "निष्�"्रियता ए�"ा�्रता स��aना",
+    "hydrationAlert": "पाण६ पिण�! � णि ड�9ळ्या��a६ विश्रा�त६",
+    "sentRequestsTitle": "पाठवल�!ल्या विन�त्या (मित्रा�a्या स्व६�"॒त६�a६ प्रत६�"्षा)",
+    "liveStudyServer": "थ�!�x �&भ्यास म�डळ सर्व्हर",
+    "copyWifiLink": "वाय-फाय लि��" �"�0प६ �"रा",
+    "points": "�ुण",
+    "searchPlaceholder": "�"ार्य�!, �&भ्यास विषय, वर्�मित्र श�9धा...",
+    "cancel": "रद्द �"रा"
+  },
+  "hi": {
+    "dashboard": "ड��शब�9र्ड",
+    "timer": "फ�9�"स �xा�!मर",
+    "tasks": "�"ार्य स��a६",
+    "disciplines": "�&नुशासन व शा�ाए�",
+    "analytics": "�हन विश्ल�!षण",
+    "friends": "�&ध्ययन सम�ह",
+    "rewards": "पुरस्�"ार स्�x�9र",
+    "themes": "थ६म म���x्रि�"्स",
+    "settings": "स�!�xि��्स",
+    "enterSystem": "सिस्�xम म�!� प्रव�!श �"र�!�",
+    "welcomeBack": "द��नि�" ए�"ा�्रता �"�9�xा स�"्रिय.",
+    "buildLegacy": "�&पन६ पह�aान बनाए�",
+    "online": "स�"्रिय (�नला�!न)",
+    "dailyTelemetry": "द��नि�" ए�"ा�्रता �x�!ल६म�!�x्र६",
+    "focusDurationWeek": "साप्ताहि�" �&ध्ययन समय",
+    "productivityTimer": "�0त्पाद�"ता फ�9�"स �xा�!मर",
+    "todaysTasks": "� �S �"�! मु�्य �"ार्य",
+    "addTask": "+ �"ार्य �S�9ड़�!�",
+    "newFocusTask": "नया �"ार्य",
+    "queueEmpty": "�"ार्य स��a६ �&भ६ �ाल६ ह��",
+    "queueEmptyDesc": "�&पन�! �"�0ल�!�S �&सा�!नम�!��x या प्र�9�S�!�"्�x �S�9ड़�!�। � प�"�! �"ार्य सुर�"्षित रह�!���!।",
+    "createFirstTask": "+ पहला �"ार्य �S�9ड़�!�",
+    "studyCircleEmpty": "� प�"ा �&ध्ययन सम�ह �&भ६ �ाल६ ह��",
+    "studyCircleEmptyDesc": "साथ मिल�"र �&ध्ययन �"रन�! �"�! लिए @username स�! द�9स्त�9� �"�9 �S�9ड़�!�।",
+    "addFriend": "द�9स्त �S�9ड़�!�",
+    "sendRequest": "�&नुर�9ध भ�!�S�!�",
+    "pendingRequests": "ल�बित मित्र �&नुर�9ध",
+    "accept": "स्व६�"ार �"र�!�",
+    "decline": "�&स्व६�"ार",
+    "kudosSent": "�0त्साहवर्धन भ�!�Sा �या!",
+    "sendHighFive": "फ�9�"स हा��-फा�!व भ�!�S�!�",
+    "fullRecord": "श���"्षणि�" रि�"�0र्ड �x्रा�स�"्रिप्�x",
+    "totalHours": "�"ुल �&ध्ययन ����x�!",
+    "tasksCompleted": "प�र्ण �"िए �ए �"ार्य",
+    "consistencyGrade": "निर�तरता र�!�xि��",
+    "level": "स्तर (Level)",
+    "pomodoro": "प�9म�9ड�9र�9",
+    "deepWork": "�हन �&ध्ययन",
+    "flowState": "प्रवाह �&वस्था",
+    "break": "विश्राम",
+    "reset": "र६स�!�x �"र�!�",
+    "startSession": "सत्र शुर� �"र�!�",
+    "pauseSession": "सत्र र�9�"�!�",
+    "ambientMode": "शा�त प�र्णस्�"्र६न",
+    "exitAmbient": "स्�"्र६न स�! बाहर � ए�",
+    "settingsTitle": "सिस्�xम एव� प्र�9फा�!ल स�!�xि��्स",
+    "profileTab": "प्र�9फा�!ल",
+    "appearanceTab": "दि�ाव�x व थ६म",
+    "languageTab": "भाषा",
+    "audioTab": "ध्वनि स�!�xि��्स",
+    "dataTab": "ड�!�xा व ब���"�&प",
+    "serverTab": "सर्वर व न�!�xवर्�"",
+    "fullName": "प�रा नाम",
+    "usernameHandle": "य��S़रन�!म ह���डल (@)",
+    "bioMission": "श���"्षणि�" परि�aय व ल�"्ष्य",
+    "university": "�"�0ल�!�S / विश्वविद्यालय",
+    "degreeBranch": "डि�्र६ / शा�ा",
+    "academicYear": "श���"्षणि�" वर्ष / सत्र",
+    "uploadPhoto": "प६स६ स�! फ�9�x�9 �&पल�9ड �"र�!�",
+    "saveChanges": "परिवर्तन सह�!�S�!�",
+    "darkMode": "डार्�" �ल�!ड म�!श",
+    "lightMode": "�"्ल६न ल�"्�S़र६ ला�!�x",
+    "exportBackup": "JSON ब���"�&प डा�0नल�9ड �"र�!�",
+    "importBackup": "JSON ब���"�&प �&पल�9ड �"र�!�",
+    "resetData": "ऐप ड�!�xा र६स�!�x �"र�!�",
+    "serverConnected": "ल�9�"ल सर्वर �Sुड़ा हु�  ह�� (Port 3001)",
+    "notificationsTitle": "स��aनाए� �र रिमा�!�डर",
+    "allNotifications": "सभ६ स��aनाए�",
+    "socialAlerts": "मित्र �र सामा�Sि�"",
+    "reminderAlerts": "�"ार्य रिमा�!�डर",
+    "systemAlerts": "सिस्�xम �&लर्�x",
+    "noNotifications": "�&भ६ �"�9�� स��aना नह६� ह��",
+    "noNotificationsDesc": "�Sब � प�"�9 मित्र �&नुर�9ध या रिमा�!�डर प्राप्त ह�9���!, व�! यहा� दि�ा�� द�!���!।",
+    "markAllRead": "सभ६ �"�9 पढ़ा हु�  �aिह्नित �"र�!�",
+    "clearAll": "सभ६ ह�xाए�",
+    "enableDesktopAlerts": "ड�!स्�"�x�0प स��aनाए� �aाल� �"र�!�",
+    "desktopAlertsActive": "ड�!स्�"�x�0प स��aनाए� स�"्रिय ह���",
+    "scheduleReminder": "रिमा�!�डर श�!ड्य�ल �"र�!�",
+    "noReminder": "�"�9�� रिमा�!�डर नह६�",
+    "snooze10m": "१० मिन�x स्न��S़ �"र�!�",
+    "markDone": "प�र्ण हु�  (+XP)",
+    "testNotification": "पर६�"्षण स��aना भ�!�S�!�",
+    "notificationsTab": "स��aनाए� �र �&लर्�x",
+    "inactivityAlert": "निष्�"्रियता फ�9�"स स��aना",
+    "hydrationAlert": "�Sलपान �र � ���9� �"ा विश्राम",
+    "sentRequestsTitle": "भ�!�S�! �ए �&नुर�9ध (स्व६�"॒ति �"६ प्रत६�"्षा)",
+    "liveStudyServer": "ला�!व �&ध्ययन सर्वर",
+    "copyWifiLink": "वा��-फा�� लि��" �"�0प६ �"र�!�",
+    "points": "�&��"",
+    "searchPlaceholder": "�"ार्य, विषय, सहपाठ६ ��9�S�!�...",
+    "cancel": "रद्द �"र�!�"
+  },
+  "te": {
+    "dashboard": "డాష్�Rబ�9ర్డ్",
+    "timer": "ఫ�9�"స్ �x��మర్",
+    "tasks": "�xాస్�"్ �Sాబితా",
+    "disciplines": "�"్రమశి�"్షణలు",
+    "analytics": "ల�9త��న విశ్ల�!షణ",
+    "friends": "స్�xడ౬ సర్�"ిల్",
+    "rewards": "రివార్డ్స్ స్�x�9ర్",
+    "themes": "థ౬మ్ మ్యా�x్రి�"్స్",
+    "settings": "స� �x్�xి��్�Rలు",
+    "enterSystem": "సిస్�xమ్�Rల�9�"ి ప్రవ�!శి��a�డి",
+    "welcomeBack": "ఫ�9�"స్ �"�9�xా యా�"్�xివ్�R�ా �0�ది.",
+    "buildLegacy": "మ౬ వారసత్వాన్ని నిర్మి��aు�"�9�డి",
+    "online": "� న్�Rల��న్",
+    "dailyTelemetry": "ర�9�Sువార౬ �x� లిమ� �x్ర౬",
+    "focusDurationWeek": "వారపు ఫ�9�"స్ వ్యవధి",
+    "productivityTimer": "�0త్పాద�"త �x��మర్",
+    "todaysTasks": "న�!�xి ఫ�9�"స్ �xాస్�"్�Rలు",
+    "addTask": "+ �xాస్�"్ �S�9డి��a�డి",
+    "newFocusTask": "�"�`త్త �xాస్�"్",
+    "queueEmpty": "�xాస్�"్ �Sాబితా �ాళ౬�ా �0�ది",
+    "queueEmptyDesc": "మ౬ �"�9ర్స్�Rవర్�"్ ల�!దా ప్రా�S� �"్�x్�Rలను �S�9డి��a�డి. డ�!�xా భద్ర��ా �0��xు�ది.",
+    "createFirstTask": "+ మ�`ద�xి �xాస్�"్ స౒ష్�xి��a�డి",
+    "studyCircleEmpty": "మ౬ స్�xడ౬ సర్�"ిల్ వ�!�aి �0�ది",
+    "studyCircleEmptyDesc": "�"లిసి �aదువు�"�9వడాని�"ి @username ద్వారా స్న�!హితులను � హ్వాని��a�డి.",
+    "addFriend": "స్న�!హితుడిని �S�9డి��a�డి",
+    "sendRequest": "రి�"్వ� స్�x్ ప�ప�డి",
+    "pendingRequests": "స్న�!హితుల �&భ్యర్థనలు",
+    "accept": "�&��౬�"రి��aు",
+    "decline": "తిరస్�"రి��aు",
+    "kudosSent": "హ��-ఫ��వ్ ప�పబడి�ది!",
+    "sendHighFive": "హ��-ఫ��వ్ ప�ప�డి",
+    "fullRecord": "విద్యా రి�"ార్డు",
+    "totalHours": "మ�`త్త� ఫ�9�"స్ ���xలు",
+    "tasksCompleted": "ప�ర్తయిన పనులు",
+    "consistencyGrade": "స్థిరత్వ ర�!�xి��్",
+    "level": "స్థాయి (Level)",
+    "pomodoro": "ప�9మ�9డ�9ర�9",
+    "deepWork": "డ౬ప్ వర్�"్",
+    "flowState": "ఫ్ల�9 స్�x�!�x్",
+    "break": "విరామ�",
+    "reset": "ర౬స� �x్",
+    "startSession": "స� షన్ ప్రార�భి��a�డి",
+    "pauseSession": "పా�S్ �a�!య�డి",
+    "ambientMode": "యా�బియ��x్ ఫుల్�Rస్�"్ర౬న్",
+    "exitAmbient": "నిష్�"్రమి��a�డి",
+    "settingsTitle": "సిస్�xమ్ & ప్ర�`ఫ��ల్ స� �x్�xి��్�Rలు",
+    "profileTab": "ప్ర�`ఫ��ల్",
+    "appearanceTab": "ర�ప� & థ౬మ్",
+    "languageTab": "భాష",
+    "audioTab": "� డియ�9",
+    "dataTab": "డ�!�xా & బ్యా�"ప్",
+    "serverTab": "సర్వర్ & న� �x్�Rవర్�"్",
+    "fullName": "ప�ర్తి ప�!రు",
+    "usernameHandle": "య��Sర్�Rన�!మ్ హ్యా�డిల్ (@)",
+    "bioMission": "బయ�9 & ల�"్ష్య�",
+    "university": "�"ళాశాల / విశ్వవిద్యాలయ�",
+    "degreeBranch": "డి�్ర౬ / బ్రా��a్",
+    "academicYear": "విద్యా స�వత్సర�",
+    "uploadPhoto": "ఫ�9�x�9 �&ప్�Rల�9డ్ �a�!య�డి",
+    "saveChanges": "మార్పులను స�!వ్ �a�!య�డి",
+    "darkMode": "డార్�"్ మ�9డ్",
+    "lightMode": "ల���x్ మ�9డ్",
+    "exportBackup": "JSON బ్యా�"ప్ డ�Rన్�Rల�9డ్",
+    "importBackup": "JSON బ్యా�"ప్ �&ప్�Rల�9డ్",
+    "resetData": "యాప్ ర౬స� �x్",
+    "serverConnected": "ల�9�"ల్ సర్వర్ �"న� �"్�x్ �a�!యబడి�ది (Port 3001)",
+    "notificationsTitle": "న�9�xిఫి�"�!షన్�Rలు & రిమ���డర్�Rలు",
+    "allNotifications": "�&న్ని �&లర్�x్�Rలు",
+    "socialAlerts": "స�9షల్ & ఫ్ర� �డ్స్",
+    "reminderAlerts": "�xాస్�"్ రిమ���డర్�Rలు",
+    "systemAlerts": "సిస్�xమ్",
+    "noNotifications": "న�9�xిఫి�"�!షన్�Rలు ల�!వు",
+    "noNotificationsDesc": "స్న�!హితుల �&భ్యర్థనలు మరియు రిమ���డర్�Rలు �!�"్�"డ �"నిపిస్తాయి.",
+    "markAllRead": "�&న్న౬ �aదివిన�x్లు �ుర్తు��aు",
+    "clearAll": "�&న్న౬ �"్లియర్ �a�!యి",
+    "enableDesktopAlerts": "డ� స్�"్�R�xాప్ న�9�xిఫి�"�!షన్�Rలు ప్రార�భి��a�డి",
+    "desktopAlertsActive": "డ� స్�"్�R�xాప్ �&లర్�x్�Rలు యా�"్�xివ్�R�ా �0న్నాయి",
+    "scheduleReminder": "రిమ���డర్ ష� డ్య�ల్ �a�!య�డి",
+    "noReminder": "రిమ���డర్ ల�!దు",
+    "snooze10m": "10 నిమిషాలు వాయిదా",
+    "markDone": "ప�ర్తయి�ది (+XP)",
+    "testNotification": "�x� స్�x్ �&లర్�x్ ప�ప�డి",
+    "notificationsTab": "న�9�xిఫి�"�!షన్�Rలు",
+    "inactivityAlert": "�!న్�Rయా�"్�xివి�x౬ ఫ�9�"స్ �&లర్�x్",
+    "hydrationAlert": "న౬రు త్రా��డి & �"��xి విశ్రా�తి",
+    "sentRequestsTitle": "ప�పిన �&భ్యర్థనలు (� మ�9ద� �"�9స� వ�!�aి �0న్నాయి)",
+    "liveStudyServer": "ల��వ్ స్�xడ౬ సర్వర్",
+    "copyWifiLink": "వ��-ఫ�� లి��"్ �"ాప౬ �a�!య�డి",
+    "points": "పాయి��x్లు",
+    "searchPlaceholder": "�xాస్�"్�Rలు, స్న�!హితులను శ�9ధి��a�డి...",
+    "cancel": "రద్దు �a�!య�డి"
+  },
+  "ta": {
+    "dashboard": "�xாஷ்ப�9ர்�xு",
+    "timer": "�"வனம் �x��மர்",
+    "tasks": "பணி ப�x்�xியல்",
+    "disciplines": "�ழு�"்�"�"்�"ள்",
+    "analytics": "� ழ்ந்த ப�"ுப்பாய்வு",
+    "friends": "ப�xிப்பு வ�x்�xம்",
+    "rewards": "வ� �"ுமதி �&�"்�"ா�xி",
+    "themes": "த௬ம் ம�!�x்ரி�"்ஸ்",
+    "settings": "�&ம��ப்பு�"ள்",
+    "enterSystem": "�"ணினியில் நுழ��யவும்",
+    "welcomeBack": "�"வன �!ல�"்�"ு �a� யலில் �0ள்ளது.",
+    "buildLegacy": "�0�"்�"ள் வரலாற்ற�� �0ருவா�"்�"ு�"்�"ள்",
+    "online": "� ன்ல��ன்",
+    "dailyTelemetry": "தின�aரி �x� லிம� �x்ரி",
+    "focusDurationWeek": "வாராந்திர �"வன ந�!ரம்",
+    "productivityTimer": "�0ற்பத்தித்திறன் �x��மர்",
+    "todaysTasks": "�!ன்ற��ய மு�"்�"ிய பணி�"ள்",
+    "addTask": "+ பணி �a�!ர்",
+    "newFocusTask": "புதிய பணி",
+    "queueEmpty": "பணி வரி�a�� �"ாலியா�" �0ள்ளது",
+    "queueEmptyDesc": "�0�"்�"ள் பா�xப்பிரிவு�"ள் �&ல்லது பணி�"ள���a் �a�!ர்�"்�"வும். �&வ�� நிரந்தரமா�" �a�!மி�"்�"ப்ப�xும்.",
+    "createFirstTask": "+ முதல் பணிய�� �0ருவா�"்�"வும்",
+    "studyCircleEmpty": "�0�"்�"ள் ப�xிப்பு வ�x்�xம் �"ாத்திரு�"்�"ிறது",
+    "studyCircleEmptyDesc": "நண்பர்�"ள�� @username ம�லம் �!ண��த்து �ன்றா�" முன்ன�!று�"்�"ள்.",
+    "addFriend": "நண்பர���a் �a�!ர்",
+    "sendRequest": "�"�9ரி�"்�"�� �&னுப்பு",
+    "pendingRequests": "நண்பர் �"�9ரி�"்�"���"ள்",
+    "accept": "ஏற்�"வும்",
+    "decline": "நிரா�"ரி",
+    "kudosSent": "வாழ்த்து �&னுப்பப்ப�x்�xது!",
+    "sendHighFive": "ஹ��-ஒப��வ் �&னுப்பு",
+    "fullRecord": "�"ல்விப் பதிவு",
+    "totalHours": "ம�`த்த �"வன ந�!ரம்",
+    "tasksCompleted": "மு�xித்த பணி�"ள்",
+    "consistencyGrade": "நில��யான மதிப்ப௬�xு",
+    "level": "நில�� (Level)",
+    "pomodoro": "ப�`ம�9�x�9ர�9",
+    "deepWork": "� ழ்ந்த வ�!ல��",
+    "flowState": "பாய்வு நில��",
+    "break": "�!�x��வ�!ள��",
+    "reset": "ம௬�x்�xம��",
+    "startSession": "�&மர்வ��த் த�`�x�"்�"ு",
+    "pauseSession": "�!�x��நிறுத்து",
+    "ambientMode": "�&ம��தியான முழுத்திர��",
+    "exitAmbient": "வ� ளிய�!று",
+    "settingsTitle": "�&ம��ப்பு�"ள் & �aுயவிவரம்",
+    "profileTab": "�aுயவிவரம்",
+    "appearanceTab": "த�9ற்றம் & த௬ம்",
+    "languageTab": "ம�`ழி",
+    "audioTab": "�லி",
+    "dataTab": "தரவு & �"ாப்புப்பிரதி",
+    "serverTab": "�aர்வர் & ந� �x்வ�`ர்�"்",
+    "fullName": "முழுப் ப� யர்",
+    "usernameHandle": "பயனர்ப� யர் (@)",
+    "bioMission": "�aுயவிவரம் & ந�9�"்�"ம்",
+    "university": "�"ல்ல�ரி / பல்�"ல���"்�"ழ�"ம்",
+    "degreeBranch": "ப�x்�xம் / துற��",
+    "academicYear": "�"ல்வி � ண்�xு",
+    "uploadPhoto": "பு�"��ப்ப�xம் பதிவ�!ற்றவும்",
+    "saveChanges": "மாற்ற�"்�"ள���a் �a�!மி�"்�"வும்",
+    "darkMode": "�!ருண்�x பயன்முற��",
+    "lightMode": "�ளி பயன்முற��",
+    "exportBackup": "JSON �"ாப்புப்பதிவு பதிவிற�"்�"ு",
+    "importBackup": "JSON �"ாப்புப்பதிவு ஏற்று",
+    "resetData": "தரவ�� ம௬�x்�xம��",
+    "serverConnected": "�aர்வர் �!ண���"்�"ப்ப�x்�xுள்ளது (Port 3001)",
+    "notificationsTitle": "�&றிவிப்பு�"ள் & நின��வ��x்�xல்�"ள்",
+    "allNotifications": "�&ன��த்து விழிப்ப��x்�xல்�"ளும்",
+    "socialAlerts": "�aம��"ம் & நண்பர்�"ள்",
+    "reminderAlerts": "பணி நின��வ��x்�xல்�"ள்",
+    "systemAlerts": "�&ம��ப்பு",
+    "noNotifications": "�&றிவிப்பு�"ள் �!ல்ல��",
+    "noNotificationsDesc": "நண்பர் �"�9ரி�"்�"���"ள் மற்றும் நின��வ��x்�xல்�"ள் �!�"்�"�! த�9ன்றும்.",
+    "markAllRead": "�&ன��த்த��யும் ப�xித்ததா�"�"் �"ுறி�"்�"வும்",
+    "clearAll": "�&ன��த்த��யும் �&ழி�"்�"வும்",
+    "enableDesktopAlerts": "�x� ஸ்�"்�xாப் �&றிவிப்பு�"ள�� �!ய�"்�"ு",
+    "desktopAlertsActive": "�x� ஸ்�"்�xாப் விழிப்ப��x்�xல்�"ள் �a� யலில் �0ள்ளன",
+    "scheduleReminder": "நின��வ��x்�xல�� தி�x்�xமி�xு�"்�"ள்",
+    "noReminder": "நின��வ��x்�xல் �!ல்ல��",
+    "snooze10m": "10 நிமி�x�"்�"ள் �த்திவ��",
+    "markDone": "மு�xிந்தது (+XP)",
+    "testNotification": "�a�9தன�� �&றிவிப்ப�� �&னுப்பு",
+    "notificationsTab": "�&றிவிப்பு�"ள்",
+    "inactivityAlert": "�a� யலின்ம�� �"வன விழிப்ப��x்�xல்",
+    "hydrationAlert": "தண்ண௬ர் �"ு�xி�"்�"வும் & �"ண் �ய்வு",
+    "sentRequestsTitle": "�&னுப்பப்ப�x்�x �"�9ரி�"்�"���"ள் (ஏற்பு�"்�"ா�" �"ாத்திரு�"்�"ிறது)",
+    "liveStudyServer": "ந�!ரல�� ப�xிப்பு �aர்வர்",
+    "copyWifiLink": "வ��ஒப�� �!ண��ப்ப�� ந�"ல� �xு�"்�"வும்",
+    "points": "புள்ளி�"ள்",
+    "searchPlaceholder": "பணி�"ள், நண்பர்�"ள��த் த�!�xு�"்�"ள்...",
+    "cancel": "ரத்து �a� ய்"
+  },
+  "bn": {
+    "dashboard": "ড্যাশব�9র্ড",
+    "timer": "ফ�9�"াস �xা�!মার",
+    "tasks": "�"া�S�!র তালি�"া",
+    "disciplines": "শ৒�"্�লা",
+    "analytics": "�ভ৬র বিশ্ল�!ষণ",
+    "friends": "�&ধ্যয়ন ব৒ত্ত",
+    "rewards": "পুরস্�"ার স্�x�9র",
+    "themes": "থিম ম্যা�x্রি�"্স",
+    "settings": "স�!�xি�স",
+    "enterSystem": "সিস্�x�!ম�! প্রব�!শ �"রুন",
+    "welcomeBack": "দ��নি�" ফ�9�"াস ল�"্ষ্য স�"্রিয়।",
+    "buildLegacy": "� পনার ঐতিহ্য ত��রি �"রুন",
+    "online": "�&নলা�!ন",
+    "dailyTelemetry": "দ��নি�" �x�!লিম�!�x্রি",
+    "focusDurationWeek": "সাপ্তাহি�" ফ�9�"াস সময়",
+    "productivityTimer": "�0ত্পাদনশ৬লতা �xা�!মার",
+    "todaysTasks": "� �S�"�!র ফ�9�"াস �"া�S",
+    "addTask": "+ �"া�S য�9� �"রুন",
+    "newFocusTask": "নতুন �"া�S",
+    "queueEmpty": "তালি�"া বর্তমান�! �ালি � �:�!",
+    "queueEmptyDesc": "� পনার �"�9র্স�য়ার্�" বা প্র�"ল্প য�9� �"রুন। তথ্য স্থায়৬ভাব�! স�র�"্ষিত থা�"ব�!।",
+    "createFirstTask": "+ প্রথম �"া�S ত��রি �"রুন",
+    "studyCircleEmpty": "� পনার �&ধ্যয়ন ব৒ত্ত �&প�!�"্ষা �"র�:�!",
+    "studyCircleEmptyDesc": "এ�"সাথ�! পড়ার �Sন্য @username দিয়�! বন্ধুদ�!র য�9� �"রুন।",
+    "addFriend": "বন্ধু য�9� �"রুন",
+    "sendRequest": "�&নুর�9ধ পাঠান",
+    "pendingRequests": "বন্ধুত্ব�!র �&নুর�9ধ",
+    "accept": "�্রহণ �"রুন",
+    "decline": "প্রত্যা�্যান",
+    "kudosSent": "শুভ�!�a্�:া পাঠান�9 হয়�!�:�!!",
+    "sendHighFive": "হা�!-ফা�!ভ পাঠান",
+    "fullRecord": "এ�"াড�!মি�" র�!�"র্ড",
+    "totalHours": "ম�9�x ফ�9�"াস ��ণ্�xা",
+    "tasksCompleted": "সম্পন্ন �"া�S",
+    "consistencyGrade": "ধারাবাহি�"তা র�!�xি�",
+    "level": "স্তর (Level)",
+    "pomodoro": "প�9ম�9ড�9র�9",
+    "deepWork": "�ভ৬র �"া�S",
+    "flowState": "ফ্ল�9 স্�x�!�x",
+    "break": "বিরতি",
+    "reset": "রিস�!�x",
+    "startSession": "স�!শন শুরু �"রুন",
+    "pauseSession": "বিরতি দিন",
+    "ambientMode": "�&্যাম্বিয়�!ন্�x ম�9ড",
+    "exitAmbient": "প্রস্থান �"রুন",
+    "settingsTitle": "সিস্�x�!ম � প্র�9ফা�!ল স�!�xি�স",
+    "profileTab": "প্র�9ফা�!ল",
+    "appearanceTab": "�a�!হারা � থিম",
+    "languageTab": "ভাষা",
+    "audioTab": "�&ডি�",
+    "dataTab": "ড�!�xা � ব্যা�"� প",
+    "serverTab": "সার্ভার � ন�!�x�য়ার্�"",
+    "fullName": "পুর�9 নাম",
+    "usernameHandle": "�!�0�Sারন�!ম (@)",
+    "bioMission": "বায়�9 � ল�"্ষ্য",
+    "university": "�"ল�!�S / বিশ্ববিদ্যালয়",
+    "degreeBranch": "ডি�্রি / বিভা�",
+    "academicYear": "শি�"্ষাবর্ষ",
+    "uploadPhoto": "�:বি � পল�9ড �"রুন",
+    "saveChanges": "পরিবর্তন স�র�"্ষণ �"রুন",
+    "darkMode": "ডার্�" ম�9ড",
+    "lightMode": "লা�!�x ম�9ড",
+    "exportBackup": "JSON ব্যা�"� প ডা�0নল�9ড",
+    "importBackup": "JSON ব্যা�"� প � পল�9ড",
+    "resetData": "রিস�!�x �&্যাপ ড�!�xা",
+    "serverConnected": "ল�9�"াল সার্ভার স�যু�"্ত (Port 3001)",
+    "notificationsTitle": "বি�S্�~প্তি এব� �&নুস্মার�"",
+    "allNotifications": "সমস্ত সতর্�"তা",
+    "socialAlerts": "সামা�Sি�" � বন্ধু",
+    "reminderAlerts": "�"া�S�!র �&নুস্মার�"",
+    "systemAlerts": "সিস্�x�!ম",
+    "noNotifications": "�"�9ন বি�S্�~প্তি ন�!�!",
+    "noNotificationsDesc": "বন্ধুর �&নুর�9ধ বা �&নুস্মার�" এ�ান�! �0পস্থিত হব�!।",
+    "markAllRead": "সব পঠিত হিস�!ব�! �aিহ্নিত �"রুন",
+    "clearAll": "সব পরিষ্�"ার �"রুন",
+    "enableDesktopAlerts": "ড�!স্�"�xপ বি�S্�~প্তি স�"্রিয় �"রুন",
+    "desktopAlertsActive": "ড�!স্�"�xপ সতর্�"তা স�"্রিয় � �:�!",
+    "scheduleReminder": "�&নুস্মার�" সময় নির্ধারণ �"রুন",
+    "noReminder": "�"�9ন �&নুস্মার�" ন�!�!",
+    "snooze10m": "১০ মিনি�x স্নু�S",
+    "markDone": "সম্পন্ন (+XP)",
+    "testNotification": "পর৬�"্ষাম�ল�" সতর্�"তা পাঠান",
+    "notificationsTab": "বি�S্�~প্তি",
+    "inactivityAlert": "নিষ্�"্রিয়তা ফ�9�"াস সতর্�"তা",
+    "hydrationAlert": "�Sল পান � �a�9��!র বিশ্রাম",
+    "sentRequestsTitle": "পাঠান�9 �&নুর�9ধ (�&প�!�"্ষমান)",
+    "liveStudyServer": "লা�!ভ স্�xাডি সার্ভার",
+    "copyWifiLink": "�য়া�!ফা�! লি�"্�" �"পি �"রুন",
+    "points": "পয়�!ন্�x",
+    "searchPlaceholder": "�"া�S, বন্ধু �ুঁ�Sুন...",
+    "cancel": "বাতিল"
+  },
+  "gu": {
+    "dashboard": "ડ�!શબ�9ર્ડ",
+    "timer": "ફ�9�"સ �xા��મર",
+    "tasks": "�"ાર્ય સ��aિ",
+    "disciplines": "શિસ્ત",
+    "analytics": "�`�ડાણપ�ર્વ�" વિશ્લ�!ષણ",
+    "friends": "�&ભ્યાસ મ�ડળ",
+    "rewards": "પુરસ્�"ાર સ્�x�9ર",
+    "themes": "થ૬મ મ�!�x્રિ�"્સ",
+    "settings": "સ�!�xિ��્સ",
+    "enterSystem": "સિસ્�xમમા� પ્રવ�!શ �"ર�9",
+    "welcomeBack": "ફ�9�"સ �"્વ�9�xા સ�"્રિય �:�!.",
+    "buildLegacy": "તમાર�9 વારસ�9 બનાવ�9",
+    "online": "�નલા��ન",
+    "dailyTelemetry": "દ��નિ�" �x�!લિમ�!�x્ર૬",
+    "focusDurationWeek": "સાપ્તાહિ�" �&ભ્યાસ સમય",
+    "productivityTimer": "પ્ર�9ડ�"્�xિવિ�x૬ �xા��મર",
+    "todaysTasks": "� �Sના મુ�્ય �"ાર્ય�9",
+    "addTask": "+ �"ાર્ય �0મ�!ર�9",
+    "newFocusTask": "નવુ� �"ાર્ય",
+    "queueEmpty": "�"ાર્ય સ��aિ �ાલ૬ �:�!",
+    "queueEmptyDesc": "તમારા �&ભ્યાસ �"ાર્ય�9 �&થવા પ્ર�9�S�!�"્�x્સ �0મ�!ર�9.",
+    "createFirstTask": "+ પ્રથમ �"ાર્ય બનાવ�9",
+    "studyCircleEmpty": "તમારુ� �&ભ્યાસ મ�ડળ પ્રત૬�"્ષામા� �:�!",
+    "studyCircleEmptyDesc": "સાથ�! �&ભ્યાસ �"રવા મા�x�! @username થ૬ મિત્ર�9ન�! �S�9ડ�9.",
+    "addFriend": "મિત્ર �0મ�!ર�9",
+    "sendRequest": "વિન�ત૬ મ�9�"લ�9",
+    "pendingRequests": "મિત્ર વિન�ત૬�",
+    "accept": "સ્વ૬�"ાર�9",
+    "decline": "ન�"ાર�9",
+    "kudosSent": "શુભ�!�a્�:ા મ�9�"લ૬!",
+    "sendHighFive": "હા�!-ફા�!વ મ�9�"લ�9",
+    "fullRecord": "શ���"્ષણિ�" ર�!�"�9ર્ડ",
+    "totalHours": "�"ુલ ફ�9�"સ �"લા�"�9",
+    "tasksCompleted": "પ�ર્ણ થય�!લ �"ાર્ય�9",
+    "consistencyGrade": "સુસ��તતા ર�!�xિ��",
+    "level": "સ્તર (Level)",
+    "pomodoro": "પ�9મ�9ડ�9ર�9",
+    "deepWork": "ડ૬પ વર્�"",
+    "flowState": "ફ્લ�9 સ્�x�!�x",
+    "break": "વિરામ",
+    "reset": "ર૬સ�!�x",
+    "startSession": "સત્ર શર� �"ર�9",
+    "pauseSession": "�&�x�"ાવ�9",
+    "ambientMode": "એમ્બિયન્�x મ�9ડ",
+    "exitAmbient": "બહાર ન૬�"ળ�9",
+    "settingsTitle": "સ�!�xિ��્સ �&ન�! પ્ર�9ફા�!લ",
+    "profileTab": "પ્ર�9ફા�!લ",
+    "appearanceTab": "થ૬મ �&ન�! દ�!�ાવ",
+    "languageTab": "ભાષા",
+    "audioTab": "�ડિય�9",
+    "dataTab": "ડ�!�xા �&ન�! બ�!�"�&પ",
+    "serverTab": "સર્વર �&ન�! ન�!�xવર્�"",
+    "fullName": "પ�રુ� નામ",
+    "usernameHandle": "યુઝરન�!મ (@)",
+    "bioMission": "બાય�9 �&ન�! લ�"્ષ્ય",
+    "university": "�"�9લ�!�S / યુનિવર્સિ�x૬",
+    "degreeBranch": "ડિ�્ર૬ / શા�ા",
+    "academicYear": "શ���"્ષણિ�" વર્ષ",
+    "uploadPhoto": "ફ�9�x�9 �&પલ�9ડ �"ર�9",
+    "saveChanges": "ફ�!રફાર�9 સા�aવ�9",
+    "darkMode": "ડાર્�" મ�9ડ",
+    "lightMode": "લા���x મ�9ડ",
+    "exportBackup": "JSON બ�!�"�&પ ડા�0નલ�9ડ",
+    "importBackup": "JSON બ�!�"�&પ �&પલ�9ડ",
+    "resetData": "ડ�!�xા ર૬સ�!�x",
+    "serverConnected": "સર્વર �"ન�!�"્�x�!ડ �:�! (Port 3001)",
+    "notificationsTitle": "સ��aના� �&ન�! ર૬મા�!ન્ડર્સ",
+    "allNotifications": "બધ૬ સ��aના�",
+    "socialAlerts": "મિત્ર�9 �&ન�! સામા�Sિ�"",
+    "reminderAlerts": "�"ાર્ય ર૬મા�!ન્ડર્સ",
+    "systemAlerts": "સિસ્�xમ",
+    "noNotifications": "�"�9�� સ��aના નથ૬",
+    "noNotificationsDesc": "મિત્ર વિન�ત૬� �&ન�! ર૬મા�!ન્ડર્સ �&હ૬� દ�!�ાશ�!.",
+    "markAllRead": "બધુ� વા��a�!લુ� �aિહ્નિત �"ર�9",
+    "clearAll": "બધુ� સાફ �"ર�9",
+    "enableDesktopAlerts": "ડ�!સ્�"�x�9પ સ��aના� સ�"્ષમ �"ર�9",
+    "desktopAlertsActive": "ડ�!સ્�"�x�9પ �a�!તવણ૬� સ�"્રિય �:�!",
+    "scheduleReminder": "ર૬મા�!ન્ડર શ�!ડ્ય�લ �"ર�9",
+    "noReminder": "ર૬મા�!ન્ડર નથ૬",
+    "snooze10m": "10 મિનિ�x સ્ન�ઝ",
+    "markDone": "પ�ર્ણ થયુ� (+XP)",
+    "testNotification": "�x�!સ્�x �a�!તવણ૬ મ�9�"લ�9",
+    "notificationsTab": "સ��aના�",
+    "inactivityAlert": "નિષ્�"્રિયતા ફ�9�"સ �a�!તવણ૬",
+    "hydrationAlert": "પાણ૬ પ૬વ�9 �&ન�! � ���9ન�9 � રામ",
+    "sentRequestsTitle": "મ�9�"લ�!લ૬ વિન�ત૬� (પ્રત૬�"્ષારત)",
+    "liveStudyServer": "લા��વ સ્�xડ૬ સર્વર",
+    "copyWifiLink": "વા�!ફા�! લિ��" �"�9પ૬ �"ર�9",
+    "points": "પ�9�!ન્�x્સ",
+    "searchPlaceholder": "�"ાર્ય�9, મિત્ર�9 શ�9ધ�9...",
+    "cancel": "રદ �"ર�9"
+  },
+  "kn": {
+    "dashboard": "ಡ್ಯಾಶ್�Rಬ�9ರ್ಡ್",
+    "timer": "ಫ�9�"ಸ್ �x��ಮರ್",
+    "tasks": "�"ಾರ್ಯ�ಳ ಸಾಲು",
+    "disciplines": "ಶಿಸ್ತು",
+    "analytics": "� ಳವಾದ ವಿಶ್ಲ�!ಷಣ� ",
+    "friends": "�&ಧ್ಯಯನ ವ೒ತ್ತ",
+    "rewards": "ಬಹುಮಾನ ಮಳಿ�� ",
+    "themes": "ಥ೬ಮ್ ಮ್ಯಾ�x್ರಿ�"್ಸ್",
+    "settings": "ಸ� �x್�xಿ��್�R�ಳು",
+    "enterSystem": "ವ್ಯವಸ್ಥ� ಯನ್ನು ಪ್ರವ�!ಶಿಸಿ",
+    "welcomeBack": "ಫ�9�"ಸ್ �"�9�xಾ ಸ�"್ರಿಯವಾ�ಿದ� .",
+    "buildLegacy": "ನಿಮ್ಮ ಪರ�ಪರ� ಯನ್ನು ನಿರ್ಮಿಸಿ",
+    "online": "� ನ್�Rಲ��ನ್",
+    "dailyTelemetry": "ದ��ನ�ದಿನ �x� ಲಿಮ� �x್ರಿ",
+    "focusDurationWeek": "ವಾರದ �ಮನದ �&ವಧಿ",
+    "productivityTimer": "�0ತ್ಪಾದ�"ತ� ಯ �x��ಮರ್",
+    "todaysTasks": "�!�ದಿನ ಪ್ರಮು� �"ಾರ್ಯ�ಳು",
+    "addTask": "+ �"ಾರ್ಯ ಸ�!ರಿಸಿ",
+    "newFocusTask": "ಹ�`ಸ �"ಾರ್ಯ",
+    "queueEmpty": "�"ಾರ್ಯ�ಳ ಸಾಲು �ಾಲಿಯಾ�ಿದ� ",
+    "queueEmptyDesc": "ನಿಮ್ಮ �&ಧ್ಯಯನ �"ಾರ್ಯ�ಳನ್ನು ಸ�!ರಿಸಿ.",
+    "createFirstTask": "+ ಮ�`ದಲ �"ಾರ್ಯ ರ�aಿಸಿ",
+    "studyCircleEmpty": "ನಿಮ್ಮ �&ಧ್ಯಯನ ವ೒ತ್ತ �"ಾಯುತ್ತಿದ� ",
+    "studyCircleEmptyDesc": "�S�`ತ� ಯಾ�ಿ �&ಧ್ಯಯನ ಮಾಡಲು @username ಮ�ಲ�" ಸ್ನ�!ಹಿತರನ್ನು ಸ�!ರಿಸಿ.",
+    "addFriend": "ಸ್ನ�!ಹಿತರನ್ನು ಸ�!ರಿಸಿ",
+    "sendRequest": "ವಿನ�ತಿ �"ಳುಹಿಸಿ",
+    "pendingRequests": "ಸ್ನ�!ಹಿತರ ವಿನ�ತಿ�ಳು",
+    "accept": "ಸ್ವ೬�"ರಿಸಿ",
+    "decline": "ನಿರಾ�"ರಿಸಿ",
+    "kudosSent": "ಶುಭಾಶಯ �"ಳುಹಿಸಲಾ�ಿದ� !",
+    "sendHighFive": "ಹ��-ಫ��ವ್ �"ಳುಹಿಸಿ",
+    "fullRecord": "ಶ���"್ಷಣಿ�" ದಾ�ಲ� ",
+    "totalHours": "��x್�xು �ಮನದ ���x� �ಳು",
+    "tasksCompleted": "ಪ�ರ್ಣ��`�ಡ �"ಾರ್ಯ�ಳು",
+    "consistencyGrade": "ಸ್ಥಿರತ� ಯ ರ�!�xಿ��್",
+    "level": "ಹ�ತ (Level)",
+    "pomodoro": "ಪ�`ಮ�`ಡ�`ರ�`",
+    "deepWork": "� ಳವಾದ �&ಧ್ಯಯನ",
+    "flowState": "ಹರಿವಿನ ಸ್ಥಿತಿ",
+    "break": "ವಿರಾಮ",
+    "reset": "ಮರುಹ�`�ದಿಸಿ",
+    "startSession": "�&ಧಿವ�!ಶನ ಪ್ರಾರ�ಭಿಸಿ",
+    "pauseSession": "ವಿರಾಮ��`ಳಿಸಿ",
+    "ambientMode": "� �ಬಿಯ� ��x್ ಮ�9ಡ್",
+    "exitAmbient": "ನಿರ್�ಮಿಸಿ",
+    "settingsTitle": "ಸ� �x್�xಿ��್�R�ಳು & ಪ್ರ�`ಫ��ಲ್",
+    "profileTab": "ಪ್ರ�`ಫ��ಲ್",
+    "appearanceTab": "��9�aರತ�  & ಥ೬ಮ್",
+    "languageTab": "ಭಾಷ� ",
+    "audioTab": "� ಡಿಯ�9",
+    "dataTab": "ಡ�!�xಾ & ಬ್ಯಾ�"ಪ್",
+    "serverTab": "ಸರ್ವರ್ & ನ� �x್�Rವರ್�"್",
+    "fullName": "ಪ�ರ್ಣ ಹ� ಸರು",
+    "usernameHandle": "ಬಳ�"� ದಾರ ಹ� ಸರು (@)",
+    "bioMission": "ಬಯ�9 & �ುರಿ",
+    "university": "�"ಾಲ�!�Sು / ವಿಶ್ವವಿದ್ಯಾಲಯ",
+    "degreeBranch": "ಪದವಿ / ಶಾ�� ",
+    "academicYear": "ಶ���"್ಷಣಿ�" ವರ್ಷ",
+    "uploadPhoto": "ಫ�9�x�9 �&ಪ್�Rಲ�9ಡ್ ಮಾಡಿ",
+    "saveChanges": "ಬದಲಾವಣ� �ಳನ್ನು �0ಳಿಸಿ",
+    "darkMode": "ಡಾರ್�"್ ಮ�9ಡ್",
+    "lightMode": "ಲ���x್ ಮ�9ಡ್",
+    "exportBackup": "JSON ಬ್ಯಾ�"ಪ್ ಡ�Rನ್�Rಲ�9ಡ್",
+    "importBackup": "JSON ಬ್ಯಾ�"ಪ್ �&ಪ್�Rಲ�9ಡ್",
+    "resetData": "ಡ�!�xಾ ಮರುಹ�`�ದಿಸಿ",
+    "serverConnected": "ಸರ್ವರ್ ಸ�ಪರ್�"��`�ಡಿದ�  (Port 3001)",
+    "notificationsTitle": "ಸ��aನ� �ಳು ಮತ್ತು �S್�~ಾಪನ� �ಳು",
+    "allNotifications": "�}ಲ್ಲಾ �}�a್�aರಿ�"� �ಳು",
+    "socialAlerts": "ಸ್ನ�!ಹಿತರು & ಸಾಮಾ�Sಿ�"",
+    "reminderAlerts": "�"ಾರ್ಯ �S್�~ಾಪನ� �ಳು",
+    "systemAlerts": "ಸಿಸ್�xಮ್",
+    "noNotifications": "ಯಾವುದ�! ಸ��aನ� �ಳಿಲ್ಲ",
+    "noNotificationsDesc": "ಸ್ನ�!ಹಿತರ ವಿನ�ತಿ�ಳು �!ಲ್ಲಿ �"ಾಣಿಸುತ್ತವ� .",
+    "markAllRead": "�}ಲ್ಲವನ್ನ� �ದಲಾ�ಿದ�  �}�ದು �ುರುತಿಸಿ",
+    "clearAll": "�}ಲ್ಲವನ್ನ� ತ� ರವು��`ಳಿಸಿ",
+    "enableDesktopAlerts": "ಡ� ಸ್�"್�R�xಾಪ್ ಸ��aನ� �ಳನ್ನು ಸ�"್ರಿಯ��`ಳಿಸಿ",
+    "desktopAlertsActive": "ಡ� ಸ್�"್�R�xಾಪ್ �}�a್�aರಿ�"� �ಳು ಸ�"್ರಿಯವಾ�ಿವ� ",
+    "scheduleReminder": "�S್�~ಾಪನ� ಯನ್ನು ನಿ�ದಿಪಡಿಸಿ",
+    "noReminder": "�S್�~ಾಪನ�  �!ಲ್ಲ",
+    "snooze10m": "10 ನಿಮಿಷ ಮು�ದ�ಡಿ",
+    "markDone": "ಪ�ರ್ಣ��`�ಡಿದ�  (+XP)",
+    "testNotification": "ಪರ೬�"್ಷಾ �}�a್�aರಿ�"�  �"ಳುಹಿಸಿ",
+    "notificationsTab": "ಸ��aನ� �ಳು",
+    "inactivityAlert": "ನಿಷ್�"್ರಿಯತ� ಯ �}�a್�aರಿ�"� ",
+    "hydrationAlert": "ನ೬ರು �"ುಡಿಯಿರಿ & �"ಣ್ಣಿನ ವಿಶ್ರಾ�ತಿ",
+    "sentRequestsTitle": "�"ಳುಹಿಸಿದ ವಿನ�ತಿ�ಳು (�"ಾಯಲಾ�ುತ್ತಿದ� )",
+    "liveStudyServer": "ಲ��ವ್ ಸ್�xಡಿ ಸರ್ವರ್",
+    "copyWifiLink": "ವ��ಫ�� ಲಿ��"್ ನ�"ಲಿಸಿ",
+    "points": "�&��"�ಳು",
+    "searchPlaceholder": "�"ಾರ್ಯ�ಳು, ಸ್ನ�!ಹಿತರನ್ನು ಹುಡು�"ಿ...",
+    "cancel": "ರದ್ದುಮಾಡಿ"
+  },
+  "ml": {
+    "dashboard": "ഡാഷ്�Rബ�9ർഡ്",
+    "timer": "ഫ�9�"്�"സ് �x��മർ",
+    "tasks": "�xാസ്�"് �"്യ�",
+    "disciplines": "�&�a്�a�x�"്�"�",
+    "analytics": "� ഴത്തിലുള്ള വിശ�"ലന�",
+    "friends": "പഠന വ൒ത്ത�",
+    "rewards": "റിവാർഡ് സ്റ്റ�9ർ",
+    "themes": "ത൬� മാ�x്രി�"്സ്",
+    "settings": "�"്രമ൬�"രണ�"്�"ൾ",
+    "enterSystem": "സിസ്റ്റത്തില�!�"്�"് പ്രവ�!ശി�"്�"ു�"",
+    "welcomeBack": "ഫ�9�"്�"സ് �"്വാ�x്�x സ�S൬വമാണ്.",
+    "buildLegacy": "നി�"്�"ളു�x�  പാരമ്പര്യ� നിർമ്മി�"്�"ു�"",
+    "online": "�ൺല��ൻ",
+    "dailyTelemetry": "പ്രതിദിന �x� ലിമ� �x്രി",
+    "focusDurationWeek": "പ്രതിവാര ഫ�9�"്�"സ് സമയ�",
+    "productivityTimer": "പ്ര�`ഡ�"്�xിവിറ്റി �x��മർ",
+    "todaysTasks": "�!ന്നത്ത�  പ്രധാന �S�9ലി�"ൾ",
+    "addTask": "+ �xാസ്�"് �a�!ർ�"്�"ു�"",
+    "newFocusTask": "പുതിയ �xാസ്�"്",
+    "queueEmpty": "�"്യ� �!പ്പ�9ൾ ശ�ന്യമാണ്",
+    "queueEmptyDesc": "നി�"്�"ളു�x�  പഠന �S�9ലി�"ൾ �a�!ർ�"്�"ു�".",
+    "createFirstTask": "+ � ദ്യ �xാസ്�"് സ൒ഷ്�xി�"്�"ു�"",
+    "studyCircleEmpty": "നി�"്�"ളു�x�  പഠന വ൒ത്ത� �"ാത്തിരി�"്�"ുന്നു",
+    "studyCircleEmptyDesc": "�രുമി�a്�a് പഠി�"്�"ാൻ @username വഴി സുഹ൒ത്തു�"്�"ള�  �a�!ർ�"്�"ു�".",
+    "addFriend": "സുഹ൒ത്തിന�  �a�!ർ�"്�"ു�"",
+    "sendRequest": "�&ഭ്യർത്ഥന �&യയ്�"്�"ു�"",
+    "pendingRequests": "സുഹ൒ത്ത് �&ഭ്യർത്ഥന�"ൾ",
+    "accept": "സ്വ൬�"രി�"്�"ു�"",
+    "decline": "നിരസി�"്�"ു�"",
+    "kudosSent": "� ശ�സ�"ൾ �&യ�a്�aു!",
+    "sendHighFive": "ഹ��-ഫ��വ് �&യയ്�"്�"ു�"",
+    "fullRecord": "�&�"്�"ാദമി�"് റ� �"്�"�9ർഡ്",
+    "totalHours": "� �"�  ഫ�9�"്�"സ് മണി�"്�"�റു�"ൾ",
+    "tasksCompleted": "പ�ർത്തിയാ�"്�"ിയ �S�9ലി�"ൾ",
+    "consistencyGrade": "സ്ഥിരത റ�!റ്റി��്",
+    "level": "ല� വൽ (Level)",
+    "pomodoro": "പ�`മ�9ഡ�9റ�9",
+    "deepWork": "ഡ൬പ് വർ�"്�"്",
+    "flowState": "ഫ്ല�9 സ്റ്റ�!റ്റ്",
+    "break": "�!�xവ�!ള",
+    "reset": "റ൬സ� റ്റ്",
+    "startSession": "സ� ഷൻ � ര�ഭി�"്�"ു�"",
+    "pauseSession": "താൽ�"്�"ാലി�"മായി നിർത്തു�"",
+    "ambientMode": "� �ബിയന്റ് മ�9ഡ്",
+    "exitAmbient": "പുറത്തു�"�x�"്�"ു�"",
+    "settingsTitle": "�"്രമ൬�"രണ�"്�"ളു� പ്ര�`ഫ��ലു�",
+    "profileTab": "പ്ര�`ഫ��ൽ",
+    "appearanceTab": "ത൬� & ര�പ�",
+    "languageTab": "ഭാഷ",
+    "audioTab": "�ഡിയ�9",
+    "dataTab": "ഡാറ്റ & ബാ�"്�"പ്പ്",
+    "serverTab": "സ� ർവർ & ന� റ്റ്�Rവർ�"്�"്",
+    "fullName": "പ�ർണ്ണ പ�!ര്",
+    "usernameHandle": "യ�സർന� യി� (@)",
+    "bioMission": "ബയ�9 & ല�"്ഷ്യ�",
+    "university": "�"�9ള�!�S് / സർവ്വ�"ലാശാല",
+    "degreeBranch": "ബിരുദ� / ശാ�",
+    "academicYear": "�&ധ്യയന വർഷ�",
+    "uploadPhoto": "ഫ�9�x്�x�9 �&പ്�Rല�9ഡ് �a� യ്യു�"",
+    "saveChanges": "മാറ്റ�"്�"ൾ സ�ര�"്ഷി�"്�"ു�"",
+    "darkMode": "ഡാർ�"്�"് മ�9ഡ്",
+    "lightMode": "ല��റ്റ് മ�9ഡ്",
+    "exportBackup": "JSON ബാ�"്�"പ്പ് ഡ�ൺല�9ഡ്",
+    "importBackup": "JSON ബാ�"്�"പ്പ് �&പ്�Rല�9ഡ്",
+    "resetData": "റ൬സ� റ്റ് ഡാറ്റ",
+    "serverConnected": "സ� ർവർ �"ണ�"്റ്റു�a� യ്�Rതു (Port 3001)",
+    "notificationsTitle": "�&റിയിപ്പു�"ളു� �ർമ്മപ്പ� �xുത്തലു�"ളു�",
+    "allNotifications": "�}ല്ലാ �&ല�!ർ�x്�xു�"ളു�",
+    "socialAlerts": "സ�9ഷ്യൽ & സുഹ൒ത്തു�"്�"ൾ",
+    "reminderAlerts": "�xാസ്�"് �ർമ്മപ്പ� �xുത്തലു�"ൾ",
+    "systemAlerts": "സിസ്റ്റ�",
+    "noNotifications": "�&റിയിപ്പു�"ള�`ന്നുമില്ല",
+    "noNotificationsDesc": "സുഹ൒ത്ത് �&ഭ്യർത്ഥന�"ൾ �!വി�x�  ദ൒ശ്യമാ�"ു�.",
+    "markAllRead": "�}ല്ലാ� വായി�a്�aതായി �&�xയാളപ്പ� �xുത്തു�"",
+    "clearAll": "�}ല്ലാ� മായ്�"്�"ു�"",
+    "enableDesktopAlerts": "ഡ� സ്�"്�x�9പ്പ് �&റിയിപ്പു�"ൾ പ്രവർത്തന�"്ഷമമാ�"്�"ു�"",
+    "desktopAlertsActive": "ഡ� സ്�"്�x�9പ്പ് �&ല�!ർ�x്�xു�"ൾ സ�S൬വമാണ്",
+    "scheduleReminder": "�ർമ്മപ്പ� �xുത്തൽ ഷ� ഡ്യ�ൾ �a� യ്യു�"",
+    "noReminder": "�ർമ്മപ്പ� �xുത്തലില്ല",
+    "snooze10m": "10 മിനിറ്റ് സ്ന�സ്",
+    "markDone": "പ�ർത്തിയായി (+XP)",
+    "testNotification": "�x� സ്റ്റ് �&ല�!ർ�x്�x് �&യയ്�"്�"ു�"",
+    "notificationsTab": "�&റിയിപ്പു�"ൾ",
+    "inactivityAlert": "നിഷ്�R�"്രിയത്വ �&ല�!ർ�x്�x്",
+    "hydrationAlert": "വ� ള്ള� �"ു�xി�"്�"ു�" & �"ണ്ണിന് വിശ്രമ�",
+    "sentRequestsTitle": "�&യ�a്�a �&ഭ്യർത്ഥന�"ൾ (�"ാത്തിരി�"്�"ുന്നു)",
+    "liveStudyServer": "തത്സമയ പഠന സ� ർവർ",
+    "copyWifiLink": "വ��ഫ�� ലി�"്�"് പ�"ർപ്പു�"ൾ",
+    "points": "പ�9യിന്റു�"ൾ",
+    "searchPlaceholder": "�S�9ലി�"ൾ, സുഹ൒ത്തു�"്�"ള�  തിരയു�"...",
+    "cancel": "റദ്ദാ�"്�"ു�""
+  },
+  "pa": {
+    "dashboard": "ਡ��ਸ਼ਬ�9ਰਡ",
+    "timer": "ਫ�9�"ਸ �xਾ��ਮਰ",
+    "tasks": "�"ਾਰ�S ਸ��a੬",
+    "disciplines": "�&ਨੁਸ਼ਾਸਨ",
+    "analytics": "ਡ�ੰ��ਾ ਵਿਸ਼ਲ�!ਸ਼ਣ",
+    "friends": "�&ਧਿਐਨ ਸਰ�"ਲ",
+    "rewards": "�!ਨਾਮ ਸ�x�9ਰ",
+    "themes": "ਥ੬ਮ ਮ���x੍ਰਿ�"ਸ",
+    "settings": "ਸ���xਿੰ�ਾ�",
+    "enterSystem": "ਸਿਸ�xਮ ਵਿੱ�a ਦਾ�ਲ ਹ�9ਵ�9",
+    "welcomeBack": "ਫ�9�"ਸ �x੬�aਾ ਸਰ�ਰਮ ਹ��।",
+    "buildLegacy": "� ਪਣ੬ ਵਿਰਾਸਤ ਬਣਾ�",
+    "online": "� ਨਲਾ��ਨ",
+    "dailyTelemetry": "ਰ�9�S਼ਾਨਾ �x��ਲ੬ਮ���xਰ੬",
+    "focusDurationWeek": "ਹਫ਼ਤਾਵਾਰ੬ ਫ�9�"ਸ ਸਮਾ�",
+    "productivityTimer": "�0ਤਪਾਦ�"ਤਾ �xਾ��ਮਰ",
+    "todaysTasks": "�&ੱ�S ਦ�! ਮੁੱ� �"ੰਮ",
+    "addTask": "+ �"ੰਮ ਸ਼ਾਮਲ �"ਰ�9",
+    "newFocusTask": "ਨਵਾ� �"ੰਮ",
+    "queueEmpty": "�"ਾਰ�S ਸ��a੬ �ਾਲ੬ ਹ��",
+    "queueEmptyDesc": "� ਪਣ�! �&ਸਾ��ਨਮ����x �Sਾ� ਪ੍ਰ�9�S���"�x ਸ਼ਾਮਲ �"ਰ�9।",
+    "createFirstTask": "+ ਪਹਿਲਾ �"ੰਮ ਬਣਾ�",
+    "studyCircleEmpty": "ਤੁਹਾਡਾ �&ਧਿਐਨ ਸਰ�"ਲ �0ਡ੬�" ਰਿਹਾ ਹ��",
+    "studyCircleEmptyDesc": "�!�"ੱਠ�! ਪ�S੍ਹਨ ਲ�� @username ਰਾਹ੬� ਦ�9ਸਤਾ� ਨ�ੰ �S�9�S�9।",
+    "addFriend": "ਦ�9ਸਤ �S�9�S�9",
+    "sendRequest": "ਬ�!ਨਤ੬ ਭ�!�S�9",
+    "pendingRequests": "ਲੰਬਿਤ ਦ�9ਸਤ੬ ਬ�!ਨਤ੬� �",
+    "accept": "ਸਵ੬�"ਾਰ �"ਰ�9",
+    "decline": "ਰੱਦ �"ਰ�9",
+    "kudosSent": "ਸ਼ੁਭ�"ਾਮਨਾਵਾ� ਭ�!�S੬� � ���� �!",
+    "sendHighFive": "ਹਾ��-ਫਾ��ਵ ਭ�!�S�9",
+    "fullRecord": "�&�"ਾਦਮਿ�" ਰਿ�"ਾਰਡ",
+    "totalHours": "�"ੁੱਲ ਫ�9�"ਸ ��ੰ�x�!",
+    "tasksCompleted": "ਪ�ਰ�! �"੬ਤ�! �"ੰਮ",
+    "consistencyGrade": "ਸਥਿਰਤਾ ਰ�!�xਿੰ�",
+    "level": "ਪੱਧਰ (Level)",
+    "pomodoro": "ਪ�9ਮ�9ਡ�9ਰ�9",
+    "deepWork": "�ੰਭ੬ਰ �&ਧਿਐਨ",
+    "flowState": "ਪ੍ਰਵਾਹ �&ਵਸਥਾ",
+    "break": "ਵਿਰਾਮ",
+    "reset": "ਰ੬ਸ��ੱ�x",
+    "startSession": "ਸ��ਸ਼ਨ ਸ਼ੁਰ� �"ਰ�9",
+    "pauseSession": "ਰ�9�"�9",
+    "ambientMode": "ਸ਼ਾ�ਤ ਪ�ਰ੬ ਸ�"੍ਰ੬ਨ",
+    "exitAmbient": "ਬਾਹਰ �Sਾ�",
+    "settingsTitle": "ਸ���xਿੰ�ਾ� �&ਤ�! ਪ੍ਰ�9ਫਾ��ਲ",
+    "profileTab": "ਪ੍ਰ�9ਫਾ��ਲ",
+    "appearanceTab": "ਦਿੱ� �&ਤ�! ਥ੬ਮ",
+    "languageTab": "ਭਾਸ਼ਾ",
+    "audioTab": "� ਡ੬�",
+    "dataTab": "ਡ�!�xਾ �&ਤ�! ਬ���"�&ੱਪ",
+    "serverTab": "ਸਰਵਰ �&ਤ�! ਨ��ੱ�xਵਰ�"",
+    "fullName": "ਪ�ਰਾ ਨਾਮ",
+    "usernameHandle": "ਯ��S਼ਰਨ�!ਮ (@)",
+    "bioMission": "�S੬ਵਨ੬ �&ਤ�! �x੬�aਾ",
+    "university": "�"ਾਲ�S / ਯ�ਨ੬ਵਰਸਿ�x੬",
+    "degreeBranch": "ਡਿ�ਰ੬ / ਬ੍ਰਾ��a",
+    "academicYear": "�&�"ਾਦਮਿ�" ਸਾਲ",
+    "uploadPhoto": "ਫ�9�x�9 �&ੱਪਲ�9ਡ �"ਰ�9",
+    "saveChanges": "ਤਬਦ੬ਲ੬� � ਸੰਭਾਲ�9",
+    "darkMode": "ਡਾਰ�" ਮ�9ਡ",
+    "lightMode": "ਲਾ���x ਮ�9ਡ",
+    "exportBackup": "JSON ਬ���"�&ੱਪ ਡਾ�`ਨਲ�9ਡ",
+    "importBackup": "JSON ਬ���"�&ੱਪ �&ੱਪਲ�9ਡ",
+    "resetData": "ਡ�!�xਾ ਰ੬ਸ��ੱ�x",
+    "serverConnected": "ਸਰਵਰ �Sੁ�Sਿ�  ਹ�9�!�  ਹ�� (Port 3001)",
+    "notificationsTitle": "ਸ��aਨਾਵਾ� �&ਤ�! ਰ੬ਮਾ���ਡਰ",
+    "allNotifications": "ਸਾਰ੬� � �a�!ਤਾਵਨ੬� �",
+    "socialAlerts": "ਦ�9ਸਤ �&ਤ�! ਸਮਾ�Sਿ�"",
+    "reminderAlerts": "�"ਾਰ�S ਰ੬ਮਾ���ਡਰ",
+    "systemAlerts": "ਸਿਸ�xਮ",
+    "noNotifications": "�"�9�� ਸ��aਨਾ ਨਹ੬�",
+    "noNotificationsDesc": "ਦ�9ਸਤਾ� ਦ੬� � ਬ�!ਨਤ੬� � �!ੱਥ�! ਦਿ�ਾ�� ਦ�!ਣ�੬� �।",
+    "markAllRead": "ਸਾਰ�! ਪ�S੍ਹ�! ਵ�S�9� �aਿੰਨ੍ਹਿਤ �"ਰ�9",
+    "clearAll": "ਸਭ ਸਾਫ਼ �"ਰ�9",
+    "enableDesktopAlerts": "ਡ��ਸ�"�xਾਪ ਸ��aਨਾਵਾ� �aਾਲ� �"ਰ�9",
+    "desktopAlertsActive": "ਡ��ਸ�"�xਾਪ �a�!ਤਾਵਨ੬� � ਸਰ�ਰਮ ਹਨ",
+    "scheduleReminder": "ਰ੬ਮਾ���ਡਰ ਤਹਿ �"ਰ�9",
+    "noReminder": "�"�9�� ਰ੬ਮਾ���ਡਰ ਨਹ੬�",
+    "snooze10m": "10 ਮਿੰ�x ਸਨ��S਼",
+    "markDone": "ਪ�ਰਾ ਹ�9�!�  (+XP)",
+    "testNotification": "�x��ਸ�x �a�!ਤਾਵਨ੬ ਭ�!�S�9",
+    "notificationsTab": "ਸ��aਨਾਵਾ�",
+    "inactivityAlert": "ਸੁਸਤ੬ ਫ�9�"ਸ �a�!ਤਾਵਨ੬",
+    "hydrationAlert": "ਪਾਣ੬ ਪ੬� �&ਤ�! �&ੱ�ਾ� ਦਾ � ਰਾਮ",
+    "sentRequestsTitle": "ਭ�!�S੬� � ਬ�!ਨਤ੬� � (�0ਡ੬�" �"੬ਤ੬ �Sਾ ਰਹ੬ ਹ��)",
+    "liveStudyServer": "ਲਾ��ਵ ਸ�xੱਡ੬ ਸਰਵਰ",
+    "copyWifiLink": "ਵਾ��ਫਾ�� ਲਿੰ�" �"ਾਪ੬ �"ਰ�9",
+    "points": "�&ੰ�"",
+    "searchPlaceholder": "�"ੰਮ, ਦ�9ਸਤ ਲੱਭ�9...",
+    "cancel": "ਰੱਦ �"ਰ�9"
+  },
+  "ja": {
+    "dashboard": "㒬㒒��㒥�S㒼�0",
+    "timer": "�: 中�����~㒼",
+    "tasks": "������丬覧",
+    "disciplines": "�:�R�㒻�� �!}",
+    "analytics": "詳細�� �~�",
+    "friends": "学�9��㒼��㒫",
+    "rewards": "報�&�������",
+    "themes": "� 㒼�~設�a",
+    "settings": "����� 㒠設�a",
+    "enterSystem": "����� 㒠起�9"",
+    "welcomeBack": "�: 中����㒼��稼咍中�",
+    "buildLegacy": "己の伝説��0�",
+    "online": "��㒳㒩��㒳",
+    "dailyTelemetry": "�S���の�: 中� 㒬㒡��㒪",
+    "focusDurationWeek": "鬱��: 中�"��}�移",
+    "productivityTimer": "㒝㒢�0㒼㒭�: 中�����~㒼",
+    "todaysTasks": "�S���の���&�������",
+    "addTask": "+ ������追�`�",
+    "newFocusTask": "��規������",
+    "queueEmpty": "������は��`ま�:�",
+    "queueEmptyDesc": "課�R�学��������追�`��てくだ�"��IndexedDBに�0�&�に���R��"�Rま�"�",
+    "createFirstTask": "+ �S��Ɲの��������S�Ɛ",
+    "studyCircleEmpty": "学�9��㒼��㒫は�&�x中で�"",
+    "studyCircleEmptyDesc": "@username で学�9�追�`��㬁㒪��㒫����㒠で学����R���&��S0�ま��!� �",
+    "addFriend": "学�9�追�`�",
+    "sendRequest": "���9鬁信",
+    "pendingRequests": "学�9���9丬覧",
+    "accept": "�0�認",
+    "decline": "�~鬬",
+    "kudosSent": "㒏����㒒㒁鬁信��！",
+    "sendHighFive": "㒏����㒒㒁�鬁�9",
+    "fullRecord": "学��Ɛ績���R�",
+    "totalHours": "総�: 中�"�",
+    "tasksCompleted": "�R� �������"�",
+    "consistencyGrade": "�"�a欧�"価",
+    "level": "㒬�"㒫 (Lv)",
+    "pomodoro": "㒝㒢�0㒼㒭",
+    "deepWork": "�&�: 中",
+    "flowState": "�"㒭㒼�`��&9",
+    "break": "�� �",
+    "reset": "㒪��㒒��",
+    "startSession": "��㒒��㒧㒳�9�9",
+    "pauseSession": "丬�"�S止",
+    "ambientMode": "没�&��&���面㒢㒼�0",
+    "exitAmbient": "�&���面解�"�",
+    "settingsTitle": "����� 㒠� �㒭�"��㒼㒫設�a",
+    "profileTab": "�㒭�"��㒼㒫",
+    "appearanceTab": "�観� � 㒼�~",
+    "languageTab": "訬�~設�a",
+    "audioTab": "����㒳�0",
+    "dataTab": "�!㒼��� 㒐㒒����㒒�",
+    "serverTab": "��㒼㒐㒼� �a信",
+    "fullName": "氏名",
+    "usernameHandle": "㒦㒼��㒼㒍㒼㒠 (@)",
+    "bioMission": "�!�己紹�9� 学��:��"",
+    "university": "大学 / 学校名",
+    "degreeBranch": "��� / 学钨",
+    "academicYear": "学年 / 学�Sx",
+    "uploadPhoto": "� "�Sx��㒒�㒭㒼�0",
+    "saveChanges": "�0�:��保��",
+    "darkMode": "㒬㒼��OLED㒡㒒��㒥",
+    "lightMode": "��㒪㒼㒳㒩����㒥��㒪㒼",
+    "exportBackup": "JSON㒐㒒����㒒��!��`:",
+    "importBackup": "JSON㒐㒒����㒒�読込",
+    "resetData": "�!㒼���R�&��Ɲ�Sx�R",
+    "serverConnected": "㒭㒼��㒫��㒼㒐㒼�}��a�� (Port 3001)",
+    "notificationsTitle": "�a�x�と㒪�~��㒳㒬㒼",
+    "allNotifications": "�"べての�a�x�",
+    "socialAlerts": "学�9��㒼��㒣㒫",
+    "reminderAlerts": "�������a�x�",
+    "systemAlerts": "����� 㒠",
+    "noNotifications": "�a�x�は��`ま�:�",
+    "noNotificationsDesc": "学�9���9�������の�Sx���a�x��R��に�`きま�"�",
+    "markAllRead": "�"べて��読に�"�9",
+    "clearAll": "�"べて���}�",
+    "enableDesktopAlerts": "�!������㒒��a�x��許可",
+    "desktopAlertsActive": "�!������㒒��a�x�稼咍中",
+    "scheduleReminder": "㒪�~��㒳㒬㒼�設�a",
+    "noReminder": "㒪�~��㒳㒬㒼な�",
+    "snooze10m": "10�� ���R㒼��",
+    "markDone": "�R� に�"�9 (+XP)",
+    "testNotification": "� �����a�x��鬁信",
+    "notificationsTab": "�a�x�と��㒩㒼��",
+    "inactivityAlert": "�: 中� ��9の俒�",
+    "hydrationAlert": "水�� �S給� �:�の�息 (20-20-20)",
+    "sentRequestsTitle": "鬁信��みの学�9���9���:��09の�0�認�&ち�0",
+    "liveStudyServer": "㒩���学�9��㒼㒐㒼",
+    "copyWifiLink": "Wi-Fi㒪㒳������㒼",
+    "points": "PTS",
+    "searchPlaceholder": "������㬁学��&�:�㬁学�9��S索...",
+    "cancel": "��㒣㒳��㒫"
+  },
+  "es": {
+    "dashboard": "Panel de Control",
+    "timer": "Temporizador de Enfoque",
+    "tasks": "Cola de Tareas",
+    "disciplines": "Disciplinas",
+    "analytics": "Análisis Profundo",
+    "friends": "Círculo de Estudio",
+    "rewards": "Tienda de Recompensas",
+    "themes": "Matriz de Temas",
+    "settings": "Ajustes",
+    "enterSystem": "ENTRAR AL SISTEMA",
+    "welcomeBack": "Cuota de enfoque activa.",
+    "buildLegacy": "Construye Tu Legado",
+    "online": "En Línea",
+    "dailyTelemetry": "Telemetría Diaria de Enfoque",
+    "focusDurationWeek": "Duración Semanal de Enfoque",
+    "productivityTimer": "Temporizador de Productividad",
+    "todaysTasks": "Tareas de Enfoque de Hoy",
+    "addTask": "+ Añadir Tarea",
+    "newFocusTask": "Nueva Tarea",
+    "queueEmpty": "La cola está vacía",
+    "queueEmptyDesc": "Añade tus cursos o proyectos académicos. Se guardan permanentemente en IndexedDB.",
+    "createFirstTask": "+ Crear Primera Tarea",
+    "studyCircleEmpty": "Tu Círculo de Estudio te espera",
+    "studyCircleEmptyDesc": "Añade compañeros con su @nombre para estudiar juntos en tiempo real.",
+    "addFriend": "Añadir Amigo",
+    "sendRequest": "Enviar Solicitud",
+    "pendingRequests": "Solicitudes Pendientes",
+    "accept": "Aceptar",
+    "decline": "Rechazar",
+    "kudosSent": "¡Choca Esos Cinco Enviado!",
+    "sendHighFive": "Enviar Choca Esos Cinco",
+    "fullRecord": "Expediente Académico",
+    "totalHours": "Horas Totales",
+    "tasksCompleted": "Tareas Completadas",
+    "consistencyGrade": "Calificación de Constancia",
+    "level": "Nivel (Lv)",
+    "pomodoro": "Pomodoro",
+    "deepWork": "Trabajo Profundo",
+    "flowState": "Estado de Flujo",
+    "break": "Descanso",
+    "reset": "Reiniciar",
+    "startSession": "Iniciar Sesión",
+    "pauseSession": "Pausar",
+    "ambientMode": "Pantalla Completa Zen",
+    "exitAmbient": "Salir",
+    "settingsTitle": "Ajustes del Sistema y Perfil",
+    "profileTab": "Perfil",
+    "appearanceTab": "Apariencia",
+    "languageTab": "Idioma",
+    "audioTab": "Audio",
+    "dataTab": "Datos y Respaldo",
+    "serverTab": "Servidor y Red",
+    "fullName": "Nombre Completo",
+    "usernameHandle": "Nombre de Usuario (@)",
+    "bioMission": "Biografía Académica y Misión",
+    "university": "Universidad / Colegio",
+    "degreeBranch": "Carrera / Grado",
+    "academicYear": "Año / Semestre",
+    "uploadPhoto": "Subir Foto desde PC",
+    "saveChanges": "Guardar Cambios",
+    "darkMode": "Modo Oscuro OLED",
+    "lightMode": "Modo Claro Limpio",
+    "exportBackup": "Exportar Respaldo JSON",
+    "importBackup": "Importar Respaldo JSON",
+    "resetData": "Restablecer Datos",
+    "serverConnected": "Servidor Local Conectado (Puerto 3001)",
+    "notificationsTitle": "Notificaciones y Recordatorios",
+    "allNotifications": "Todas las Alertas",
+    "socialAlerts": "Compañeros y Social",
+    "reminderAlerts": "Recordatorios de Tareas",
+    "systemAlerts": "Sistema",
+    "noNotifications": "Sin notificaciones activas",
+    "noNotificationsDesc": "Las solicitudes de amigos y recordatorios aparecerán aquí.",
+    "markAllRead": "Marcar todo como leído",
+    "clearAll": "Borrar todo",
+    "enableDesktopAlerts": "Activar Notificaciones de Escritorio",
+    "desktopAlertsActive": "Alertas de Escritorio Activas",
+    "scheduleReminder": "Programar Recordatorio",
+    "noReminder": "Sin Recordatorio",
+    "snooze10m": "Posponer 10m",
+    "markDone": "Completar (+XP)",
+    "testNotification": "Enviar Alerta de Prueba",
+    "notificationsTab": "Notificaciones",
+    "inactivityAlert": "Alerta de Inactividad",
+    "hydrationAlert": "Hidratación y Descanso Ocular",
+    "sentRequestsTitle": "Solicitudes Enviadas (Esperando Aceptación)",
+    "liveStudyServer": "Servidor de Estudio en Vivo",
+    "copyWifiLink": "Copiar Enlace Wi-Fi",
+    "points": "PTS",
+    "searchPlaceholder": "Buscar tareas, temas, compañeros...",
+    "cancel": "Cancelar"
+  },
+  "fr": {
+    "dashboard": "Tableau de Bord",
+    "timer": "Minuteur de Focus",
+    "tasks": "File des Tâches",
+    "disciplines": "Disciplines",
+    "analytics": "Analyse Approfondie",
+    "friends": "Cercle d�"�0tude",
+    "rewards": "Boutique de Récompenses",
+    "themes": "Matrice des Thèmes",
+    "settings": "Paramètres",
+    "enterSystem": "ENTRER DANS LE SYST��ME",
+    "welcomeBack": "Quota de concentration actif.",
+    "buildLegacy": "Bâtissez Votre Légende",
+    "online": "En Ligne",
+    "dailyTelemetry": "Télémétrie Quotidienne",
+    "focusDurationWeek": "Durée Hebdomadaire",
+    "productivityTimer": "Minuteur de Productivité",
+    "todaysTasks": "Tâches Prioritaires du Jour",
+    "addTask": "+ Ajouter Tâche",
+    "newFocusTask": "Nouvelle Tâche",
+    "queueEmpty": "La file est vide",
+    "queueEmptyDesc": "Ajoutez vos cours ou projets. Enregistrés durablement dans IndexedDB.",
+    "createFirstTask": "+ Créer Première Tâche",
+    "studyCircleEmpty": "Votre Cercle d�"�0tude vous attend",
+    "studyCircleEmptyDesc": "Invitez vos camarades avec leur @nom pour étudier ensemble.",
+    "addFriend": "Ajouter Ami",
+    "sendRequest": "Envoyer Invitation",
+    "pendingRequests": "Demandes en Attente",
+    "accept": "Accepter",
+    "decline": "Refuser",
+    "kudosSent": "Tape m�"en cinq envoyé !",
+    "sendHighFive": "Envoyer un Tape m�"en cinq",
+    "fullRecord": "Relevé Académique",
+    "totalHours": "Heures Totales",
+    "tasksCompleted": "Tâches Terminées",
+    "consistencyGrade": "Note de Régularité",
+    "level": "Niveau (Lv)",
+    "pomodoro": "Pomodoro",
+    "deepWork": "Travail Profond",
+    "flowState": "�0tat de Flux",
+    "break": "Pause",
+    "reset": "Réinitialiser",
+    "startSession": "Démarrer Session",
+    "pauseSession": "Mettre en Pause",
+    "ambientMode": "Plein �0cran Ambiant",
+    "exitAmbient": "Quitter Ambiant",
+    "settingsTitle": "Paramètres du Système & Profil",
+    "profileTab": "Profil",
+    "appearanceTab": "Apparence",
+    "languageTab": "Langue",
+    "audioTab": "Audio",
+    "dataTab": "Données & Sauvegarde",
+    "serverTab": "Serveur & Réseau",
+    "fullName": "Nom Complet",
+    "usernameHandle": "Identifiant (@)",
+    "bioMission": "Biographie Académique & Objectif",
+    "university": "Université / �0cole",
+    "degreeBranch": "Diplôme / Branche",
+    "academicYear": "Année / Semestre",
+    "uploadPhoto": "Téléverser Photo depuis PC",
+    "saveChanges": "Enregistrer Modifications",
+    "darkMode": "Mode Sombre OLED",
+    "lightMode": "Mode Clair �0puré",
+    "exportBackup": "Exporter Sauvegarde JSON",
+    "importBackup": "Importer Sauvegarde JSON",
+    "resetData": "Réinitialiser l�"Application",
+    "serverConnected": "Serveur Local Connecté (Port 3001)",
+    "notificationsTitle": "Notifications & Rappels",
+    "allNotifications": "Toutes les Alertes",
+    "socialAlerts": "Camarades & Social",
+    "reminderAlerts": "Rappels de Tâches",
+    "systemAlerts": "Système",
+    "noNotifications": "Aucune notification active",
+    "noNotificationsDesc": "Les demandes d�"amis et rappels apparaîtront ici.",
+    "markAllRead": "Tout marquer comme lu",
+    "clearAll": "Tout effacer",
+    "enableDesktopAlerts": "Activer Notifications Bureau",
+    "desktopAlertsActive": "Alertes Bureau Actives",
+    "scheduleReminder": "Programmer un Rappel",
+    "noReminder": "Aucun Rappel",
+    "snooze10m": "Reporter de 10m",
+    "markDone": "Terminer (+XP)",
+    "testNotification": "Envoyer Alerte Test",
+    "notificationsTab": "Notifications",
+    "inactivityAlert": "Alerte d�"Inactivité",
+    "hydrationAlert": "Hydratation & Repos Visuel",
+    "sentRequestsTitle": "Demandes Envoyées (En attente d�"acceptation)",
+    "liveStudyServer": "Serveur d�"�0tude en Direct",
+    "copyWifiLink": "Copier Lien Wi-Fi",
+    "points": "PTS",
+    "searchPlaceholder": "Rechercher tâches, cours, camarades...",
+    "cancel": "Annuler"
+  },
+  "de": {
+    "dashboard": "�Sbersicht",
+    "timer": "Fokus-Timer",
+    "tasks": "Aufgaben-Warteschlange",
+    "disciplines": "Disziplinen",
+    "analytics": "Tiefenanalyse",
+    "friends": "Lernkreis",
+    "rewards": "Belohnungen",
+    "themes": "Theme-Matrix",
+    "settings": "Einstellungen",
+    "enterSystem": "SYSTEM STARTEN",
+    "welcomeBack": "Fokus-Quote aktiv.",
+    "buildLegacy": "Erschaffe dein Vermächtnis",
+    "online": "Online",
+    "dailyTelemetry": "Tägliche Fokus-Telemetrie",
+    "focusDurationWeek": "Wöchentliche Fokuszeit",
+    "productivityTimer": "Produktivitäts-Timer",
+    "todaysTasks": "Heutige Fokus-Aufgaben",
+    "addTask": "+ Aufgabe hinzufügen",
+    "newFocusTask": "Neue Aufgabe",
+    "queueEmpty": "Warteschlange ist leer",
+    "queueEmptyDesc": "Füge Studienaufgaben oder Projekte hinzu. Dauerhaft in IndexedDB gespeichert.",
+    "createFirstTask": "+ Erste Aufgabe erstellen",
+    "studyCircleEmpty": "Dein Lernkreis wartet",
+    "studyCircleEmptyDesc": "Lade Kommilitonen mit ihrem @Namen ein, um gemeinsam zu lernen.",
+    "addFriend": "Freund hinzufügen",
+    "sendRequest": "Anfrage senden",
+    "pendingRequests": "Ausstehende Anfragen",
+    "accept": "Annehmen",
+    "decline": "Ablehnen",
+    "kudosSent": "High-Five gesendet!",
+    "sendHighFive": "High-Five senden",
+    "fullRecord": "Akademisches Protokoll",
+    "totalHours": "Gesamte Fokus-Stunden",
+    "tasksCompleted": "Erledigte Aufgaben",
+    "consistencyGrade": "Beständigkeits-Bewertung",
+    "level": "Level (Stufe)",
+    "pomodoro": "Pomodoro",
+    "deepWork": "Deep Work",
+    "flowState": "Flow-Zustand",
+    "break": "Pause",
+    "reset": "Zurücksetzen",
+    "startSession": "Sitzung starten",
+    "pauseSession": "Pausieren",
+    "ambientMode": "Ambient-Vollbild",
+    "exitAmbient": "Vollbild beenden",
+    "settingsTitle": "System- & Profileinstellungen",
+    "profileTab": "Profil",
+    "appearanceTab": "Erscheinungsbild",
+    "languageTab": "Sprache",
+    "audioTab": "Audio",
+    "dataTab": "Daten & Backup",
+    "serverTab": "Server & Netzwerk",
+    "fullName": "Vollständiger Name",
+    "usernameHandle": "Benutzername (@)",
+    "bioMission": "Akademische Bio & Ziel",
+    "university": "Hochschule / Universität",
+    "degreeBranch": "Studiengang / Fachbereich",
+    "academicYear": "Studienjahr / Semester",
+    "uploadPhoto": "Foto vom PC hochladen",
+    "saveChanges": "�nderungen speichern",
+    "darkMode": "Dark OLED Modus",
+    "lightMode": "Eleganter Hell-Modus",
+    "exportBackup": "JSON-Backup exportieren",
+    "importBackup": "JSON-Backup importieren",
+    "resetData": "App-Daten zurücksetzen",
+    "serverConnected": "Lokaler Server verbunden (Port 3001)",
+    "notificationsTitle": "Benachrichtigungen & Erinnerungen",
+    "allNotifications": "Alle Benachrichtigungen",
+    "socialAlerts": "Soziales & Freunde",
+    "reminderAlerts": "Aufgaben-Erinnerungen",
+    "systemAlerts": "System",
+    "noNotifications": "Keine aktiven Benachrichtigungen",
+    "noNotificationsDesc": "Freundschaftsanfragen und Erinnerungen erscheinen hier.",
+    "markAllRead": "Alle als gelesen markieren",
+    "clearAll": "Alle löschen",
+    "enableDesktopAlerts": "Desktop-Benachrichtigungen aktivieren",
+    "desktopAlertsActive": "Desktop-Benachrichtigungen aktiv",
+    "scheduleReminder": "Erinnerung planen",
+    "noReminder": "Keine Erinnerung",
+    "snooze10m": "10 Min. schlummern",
+    "markDone": "Erledigt (+XP)",
+    "testNotification": "Test-Benachrichtigung senden",
+    "notificationsTab": "Benachrichtigungen",
+    "inactivityAlert": "Inaktivitäts-Fokus-Hinweis",
+    "hydrationAlert": "Wasser trinken & Augenpause",
+    "sentRequestsTitle": "Gesendete Anfragen (Warten auf Annahme)",
+    "liveStudyServer": "Live-Lernkreis-Server",
+    "copyWifiLink": "WLAN-Link kopieren",
+    "points": "Punkte",
+    "searchPlaceholder": "Aufgaben, Themen, Freunde suchen...",
+    "cancel": "Abbrechen"
+  },
+  "ru": {
+    "dashboard": "�xанел�R УпѬавления",
+    "timer": "ТаймеѬ Фокђса",
+    "tasks": "�~�!еѬед�R �ада�!",
+    "disciplines": "�ис� иплин�9",
+    "analytics": "�лђбокий Анализ",
+    "friends": "У�!ебн�9й �aѬђг",
+    "rewards": "�Sагазин НагѬад",
+    "themes": "�Sа�Ѭи� а Тем",
+    "settings": "Нас�Ѭойки",
+    "enterSystem": "��~�"Т�� � С��СТ�"�SУ",
+    "welcomeBack": "НоѬма кон� ен�Ѭа� ии ак�ивна.",
+    "buildLegacy": "Создай Свое Наследие",
+    "online": "� се�и",
+    "dailyTelemetry": "�"жедневная Телеме�Ѭия",
+    "focusDurationWeek": "�Ѭемя Фокђса за Недел�}",
+    "productivityTimer": "ТаймеѬ �xѬодђк�ивнос�и",
+    "todaysTasks": "�лавн�9е �ада�!и на Сегодня",
+    "addTask": "+ �обави��R �ада�!ђ",
+    "newFocusTask": "Новая �ада�!а",
+    "queueEmpty": "�~�!еѬед�R зада�! пђс�а",
+    "queueEmptyDesc": "�обав�R�е ђ�!ебн�9е задания или пѬоек��9. �анн�9е надежно со�&Ѭаня�}�ся в IndexedDB.",
+    "createFirstTask": "+ Созда��R �xеѬвђ�} �ада�!ђ",
+    "studyCircleEmpty": "�а�� У�!ебн�9й �aѬђг ожидае�",
+    "studyCircleEmptyDesc": "�обавляй�е сокђѬсников по @username для совмес�ной ђ�!еб�9.",
+    "addFriend": "�обави��R �Ѭђга",
+    "sendRequest": "�~�пѬави��R �апѬос",
+    "pendingRequests": "��&одя�0ие �апѬос�9",
+    "accept": "�xѬиня��R",
+    "decline": "�~�клони��R",
+    "kudosSent": "�ай �xя��R о�пѬавлено!",
+    "sendHighFive": "�~�пѬави��R �ай �xя��R",
+    "fullRecord": "Академи�!еская СпѬавка",
+    "totalHours": "�сего Часов Фокђса",
+    "tasksCompleted": "��9полнено �ада�!",
+    "consistencyGrade": "�~� енка С�абил�Rнос�и",
+    "level": "УѬовен�R (Lv)",
+    "pomodoro": "�xомодоѬо",
+    "deepWork": "�лђбокая Рабо�а",
+    "flowState": "Сос�ояние �xо�ока",
+    "break": "�xеѬеѬ�9в",
+    "reset": "СбѬоси��R",
+    "startSession": "На�!а��R Сесси�}",
+    "pauseSession": "�xађза",
+    "ambientMode": "Амб�Rен� �xолноэкѬанн�9й",
+    "exitAmbient": "��9й�и",
+    "settingsTitle": "Нас�Ѭойки Сис�ем�9 и �xѬо�иля",
+    "profileTab": "�xѬо�ил�R",
+    "appearanceTab": "�не��ний �ид",
+    "languageTab": "Яз�9к",
+    "audioTab": "Ађдио",
+    "dataTab": "�анн�9е и РезеѬвная копия",
+    "serverTab": "СеѬвеѬ и Се��R",
+    "fullName": "�xолное ��мя",
+    "usernameHandle": "ЮзеѬнейм (@)",
+    "bioMission": "У�!ебное �ио и Цели",
+    "university": "�aолледж / УнивеѬси�е�",
+    "degreeBranch": "Спе� иал�Rнос��R / �aђѬс",
+    "academicYear": "У�!ебн�9й �од / Семес�Ѭ",
+    "uploadPhoto": "�агѬђзи��R Фо�о с �x�a",
+    "saveChanges": "Со�&Ѭани��R ��зменения",
+    "darkMode": "Темн�9й OLED Режим",
+    "lightMode": "Све�л�9й Чис��9й Режим",
+    "exportBackup": "ЭкспоѬ� JSON �экапа",
+    "importBackup": "��мпоѬ� JSON �экапа",
+    "resetData": "СбѬоси��R �анн�9е �xѬиложения",
+    "serverConnected": "�:окал�Rн�9й СеѬвеѬ �xодкл�}�!ен (�xоѬ� 3001)",
+    "notificationsTitle": "Уведомления и Напоминания",
+    "allNotifications": "�се �~пове�0ения",
+    "socialAlerts": "�Ѭђз�Rя и Со� иал�Rное",
+    "reminderAlerts": "Напоминания о �ада�!а�&",
+    "systemAlerts": "Сис�ема",
+    "noNotifications": "Не� ак�ивн�9�& ђведомлений",
+    "noNotificationsDesc": "�апѬос�9 в дѬђз�Rя и напоминания бђдђ� о�обѬажа��Rся здес�R.",
+    "markAllRead": "�~�ме�и��R все как пѬо�!и�анн�9е",
+    "clearAll": "�~�!ис�и��R все",
+    "enableDesktopAlerts": "�кл�}�!и��R Уведомления на Рабо�!ем С�оле",
+    "desktopAlertsActive": "�~пове�0ения Рабо�!его С�ола Ак�ивн�9",
+    "scheduleReminder": "�апланиѬова��R Напоминание",
+    "noReminder": "�ез Напоминания",
+    "snooze10m": "�~�ложи��R на 10 мин",
+    "markDone": "��9полнено (+XP)",
+    "testNotification": "�~�пѬави��R Тес�овое Уведомление",
+    "notificationsTab": "Уведомления",
+    "inactivityAlert": "Напоминание о Фокђсе",
+    "hydrationAlert": "�ода и �~�д�9�& для �лаз",
+    "sentRequestsTitle": "�~�пѬавленн�9е �апѬос�9 (�~жида�}� �xѬиня�ия)",
+    "liveStudyServer": "СеѬвеѬ У�!ебного �aѬђга",
+    "copyWifiLink": "СкопиѬова��R Wi-Fi Сс�9лкђ",
+    "points": "�~�!ки",
+    "searchPlaceholder": "��ска��R зада�!и, �ем�9, дѬђзей...",
+    "cancel": "�~�мена"
   }
 };
+
 // ==========================================
 // 2. INDEXEDDB PERSISTENCE (Zero localStorage)
 // ==========================================
@@ -153,7 +1454,7 @@ function getDB() {
 }
 async function dbRead(key, fallback = null) {
   try {
-    const apiUrl = import.meta.env.VITE_API_URL || '/api';
+    const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:5000';
     const res = await fetch(`${apiUrl}/api/store/${key}`);
     if (!res.ok) return fallback;
     const json = await res.json();
@@ -165,7 +1466,7 @@ async function dbRead(key, fallback = null) {
 }
 async function dbWrite(key, value) {
   try {
-    const apiUrl = import.meta.env.VITE_API_URL || '/api';
+    const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:5000';
     const res = await fetch(`${apiUrl}/api/store/${key}`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -610,7 +1911,7 @@ const THEMES = [{
   id: 'solo_leveling',
   name: 'Solo Leveling',
   title: 'Shadow Monarch',
-  subtitle: 'Sung Jin-Woo • Sovereign of the Shadows',
+  subtitle: 'Sung Jin-Woo ⬢ Sovereign of the Shadows',
   bgClass: 'bg-theme-solo_leveling',
   accent: '#8b5cf6',
   accentGlow: 'rgba(139, 92, 246, 0.40)',
@@ -633,7 +1934,7 @@ const THEMES = [{
   id: 'aot',
   name: 'Attack on Titan',
   title: 'Survey Corps',
-  subtitle: 'Eren Yeager & Levi • Wings of Freedom',
+  subtitle: 'Eren Yeager & Levi ⬢ Wings of Freedom',
   bgClass: 'bg-theme-aot',
   accent: '#10b981',
   accentGlow: 'rgba(16, 185, 129, 0.40)',
@@ -656,7 +1957,7 @@ const THEMES = [{
   id: 'naruto',
   name: 'Naruto',
   title: 'Sage of Six Paths',
-  subtitle: 'Naruto Uzumaki • Will of Fire',
+  subtitle: 'Naruto Uzumaki ⬢ Will of Fire',
   bgClass: 'bg-theme-naruto',
   accent: '#f97316',
   accentGlow: 'rgba(249, 115, 22, 0.40)',
@@ -679,7 +1980,7 @@ const THEMES = [{
   id: 'jjk',
   name: 'Jujutsu Kaisen',
   title: 'Limitless Void',
-  subtitle: 'Gojo Satoru • Domain Expansion',
+  subtitle: 'Gojo Satoru ⬢ Domain Expansion',
   bgClass: 'bg-theme-jjk',
   accent: '#06b6d4',
   accentGlow: 'rgba(6, 182, 212, 0.40)',
@@ -702,7 +2003,7 @@ const THEMES = [{
   id: 'demon_slayer',
   name: 'Demon Slayer',
   title: 'Hinokami Kagura',
-  subtitle: 'Tanjiro Kamado • Sun Breathing',
+  subtitle: 'Tanjiro Kamado ⬢ Sun Breathing',
   bgClass: 'bg-theme-demon_slayer',
   accent: '#e11d48',
   accentGlow: 'rgba(225, 29, 72, 0.40)',
@@ -725,7 +2026,7 @@ const THEMES = [{
   id: 'dragonball',
   name: 'Dragon Ball',
   title: 'Ultra Instinct',
-  subtitle: 'Son Goku • Autonomous State of Mind',
+  subtitle: 'Son Goku ⬢ Autonomous State of Mind',
   bgClass: 'bg-theme-dragonball',
   accent: '#38bdf8',
   accentGlow: 'rgba(56, 189, 248, 0.40)',
@@ -748,7 +2049,7 @@ const THEMES = [{
   id: 'death_note',
   name: 'Death Note',
   title: 'Dark Academia',
-  subtitle: 'L & Light • Pure Logic & Intellect',
+  subtitle: 'L & Light ⬢ Pure Logic & Intellect',
   bgClass: 'bg-theme-death_note',
   accent: '#94a3b8',
   accentGlow: 'rgba(148, 163, 184, 0.35)',
@@ -771,7 +2072,7 @@ const THEMES = [{
   id: 'spiderman',
   name: 'Spider-Man',
   title: 'Marvel Web',
-  subtitle: 'Miles Morales • Great Responsibility',
+  subtitle: 'Miles Morales ⬢ Great Responsibility',
   bgClass: 'bg-theme-spiderman',
   accent: '#ef4444',
   accentGlow: 'rgba(239, 68, 68, 0.40)',
@@ -794,7 +2095,7 @@ const THEMES = [{
   id: 'ironman',
   name: 'Iron Man',
   title: 'Stark Arc Reactor',
-  subtitle: 'Tony Stark • Mark 85 Architecture',
+  subtitle: 'Tony Stark ⬢ Mark 85 Architecture',
   bgClass: 'bg-theme-ironman',
   accent: '#f59e0b',
   accentGlow: 'rgba(245, 158, 11, 0.40)',
@@ -817,7 +2118,7 @@ const THEMES = [{
   id: 'synth_statue',
   name: 'Synth Classical',
   title: 'Vaporwave Pantheon',
-  subtitle: 'Classical Sculpture • Cyber Aesthetics',
+  subtitle: 'Classical Sculpture ⬢ Cyber Aesthetics',
   bgClass: 'bg-theme-synth_statue',
   accent: '#ec4899',
   accentGlow: 'rgba(236, 72, 153, 0.40)',
@@ -840,7 +2141,7 @@ const THEMES = [{
   id: 'cyberpunk',
   name: 'Cyberpunk',
   title: 'Night City Neon',
-  subtitle: 'David Martinez • Sandevistan Overdrive',
+  subtitle: 'David Martinez ⬢ Sandevistan Overdrive',
   bgClass: 'bg-theme-cyberpunk',
   accent: '#eab308',
   accentGlow: 'rgba(234, 179, 8, 0.40)',
@@ -1172,7 +2473,7 @@ function App() {
   const [kudosSent, setKudosSent] = useState({});
 
   // Server & Network Status
-  const [serverUrl, setServerUrl] = useState(import.meta.env.VITE_API_URL || '/api');
+  const [serverUrl, setServerUrl] = useState(import.meta.env.VITE_API_URL || (typeof window !== 'undefined' ? window.location.origin : 'http://localhost:5000'));
   const [serverConnected, setServerConnected] = useState(false);
 
   // Rewards
@@ -1630,7 +2931,7 @@ function App() {
             addNotification({
               type: 'task_reminder',
               title: 'Task Reminder: ' + t.title,
-              message: `Scheduled focus task is due now (${t.discipline} • ${t.durationMin}m session).`,
+              message: `Scheduled focus task is due now (${t.discipline} ⬢ ${t.durationMin}m session).`,
               actionPayload: {
                 taskId: t.id,
                 taskTitle: t.title
@@ -2525,7 +3826,7 @@ function App() {
       className: "flex items-center gap-3"
     }, /*#__PURE__*/React.createElement("div", {
       className: "w-10 h-10 rounded-2xl bg-gradient-to-tr from-indigo-600 to-purple-600 flex items-center justify-center font-black text-white text-lg shadow-lg shadow-indigo-500/30"
-    }, "▲"), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("h1", {
+    }, "��"), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("h1", {
       className: `text-xl font-extrabold tracking-tight flex items-center gap-2 ${isLight ? 'text-slate-900' : 'text-white'}`
     }, "ASCEND", /*#__PURE__*/React.createElement("span", {
       className: "text-[10px] uppercase font-mono px-2 py-0.5 rounded-full bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 font-bold"
@@ -2541,17 +3842,17 @@ function App() {
       value: "en"
     }, "English"), /*#__PURE__*/React.createElement("option", {
       value: "hi"
-    }, "à¤¹à¤¿à¤¨à¥à¤¦à¥€"), /*#__PURE__*/React.createElement("option", {
+    }, "हिन्द६"), /*#__PURE__*/React.createElement("option", {
       value: "es"
-    }, "EspaÃ±ol"), /*#__PURE__*/React.createElement("option", {
+    }, "Español"), /*#__PURE__*/React.createElement("option", {
       value: "ja"
-    }, "æ—¥æœ¬èªž"), /*#__PURE__*/React.createElement("option", {
+    }, "���S��~"), /*#__PURE__*/React.createElement("option", {
       value: "fr"
-    }, "FranÃ§ais"), /*#__PURE__*/React.createElement("option", {
+    }, "Français"), /*#__PURE__*/React.createElement("option", {
       value: "de"
     }, "Deutsch"), /*#__PURE__*/React.createElement("option", {
       value: "ru"
-    }, "Ð ÑƒÑÑÐºÐ¸Ð¹")), /*#__PURE__*/React.createElement("button", {
+    }, "Рђсский")), /*#__PURE__*/React.createElement("button", {
       onClick: () => {
         setColorMode(isLight ? 'dark' : 'light');
         playAudio('click');
@@ -2593,7 +3894,7 @@ function App() {
       className: "text-xs font-mono font-bold uppercase tracking-wider text-indigo-400"
     }, "Featured System Theme"), /*#__PURE__*/React.createElement("h3", {
       className: "text-2xl font-black text-white"
-    }, currentTheme.name, " • ", currentTheme.title), /*#__PURE__*/React.createElement("p", {
+    }, currentTheme.name, " ⬢ ", currentTheme.title), /*#__PURE__*/React.createElement("p", {
       className: "text-xs text-slate-300"
     }, currentTheme.subtitle))))), /*#__PURE__*/React.createElement("div", {
       className: "pt-2"
@@ -2606,9 +3907,9 @@ function App() {
       }
     }, /*#__PURE__*/React.createElement("span", null, t('enterSystem')), /*#__PURE__*/React.createElement("span", {
       className: "text-lg"
-    }, "→")))), /*#__PURE__*/React.createElement("footer", {
+    }, "� ")))), /*#__PURE__*/React.createElement("footer", {
       className: `relative z-10 max-w-7xl mx-auto w-full px-6 py-6 text-center text-xs font-mono ${isLight ? 'text-slate-400' : 'text-slate-500'}`
-    }, "Ascend OS • Native IndexedDB Engine • Zero LocalStorage • Real Node.js Social Bridge"), showEnrollModal && /*#__PURE__*/React.createElement("div", {
+    }, "Ascend OS ⬢ Native IndexedDB Engine ⬢ Zero LocalStorage ⬢ Real Node.js Social Bridge"), showEnrollModal && /*#__PURE__*/React.createElement("div", {
       className: "fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md animate-fadeIn"
     }, /*#__PURE__*/React.createElement("div", {
       className: "glass-surface w-full max-w-md rounded-3xl p-6 sm:p-8 shadow-2xl space-y-4"
@@ -2667,7 +3968,7 @@ function App() {
       style: {
         backgroundColor: currentTheme.accent
       }
-    }, "Initialize Dashboard →")))));
+    }, "Initialize Dashboard � ")))));
   }
 
   // =================================================================
@@ -2871,38 +4172,38 @@ function App() {
     value: language,
     onChange: e => setLanguage(e.target.value),
     className: `hidden sm:block px-3 py-1.5 rounded-2xl border text-xs font-bold focus:outline-none transition ${isLight ? 'bg-white border-slate-200 text-slate-700' : 'bg-slate-900/80 border-white/10 text-slate-200'}`,
-    title: "Choose Language / à¤­à¤¾à¤·à¤¾ à¤¨à¤¿à¤µà¤¡à¤¾"
+    title: "Choose Language / भाषा निवडा"
   }, /*#__PURE__*/React.createElement("option", {
     value: "en"
   }, "English (EN)"), /*#__PURE__*/React.createElement("option", {
     value: "mr"
-  }, "à¤®à¤°à¤¾à¤ à¥€ (Marathi)"), /*#__PURE__*/React.createElement("option", {
+  }, "मराठ६ (Marathi)"), /*#__PURE__*/React.createElement("option", {
     value: "hi"
-  }, "à¤¹à¤¿à¤¨à¥à¤¦à¥€ (Hindi)"), /*#__PURE__*/React.createElement("option", {
+  }, "हिन्द६ (Hindi)"), /*#__PURE__*/React.createElement("option", {
     value: "te"
-  }, "à°¤à±†à°²à±à°—à± (Telugu)"), /*#__PURE__*/React.createElement("option", {
+  }, "త� లు�ు (Telugu)"), /*#__PURE__*/React.createElement("option", {
     value: "ta"
-  }, "à®¤à®®à®¿à®´à¯ (Tamil)"), /*#__PURE__*/React.createElement("option", {
+  }, "தமிழ் (Tamil)"), /*#__PURE__*/React.createElement("option", {
     value: "bn"
-  }, "à¦¬à¦¾à¦‚à¦²à¦¾ (Bengali)"), /*#__PURE__*/React.createElement("option", {
+  }, "বা�লা (Bengali)"), /*#__PURE__*/React.createElement("option", {
     value: "gu"
-  }, "àª—à«àªœàª°àª¾àª¤à«€ (Gujarati)"), /*#__PURE__*/React.createElement("option", {
+  }, "�ુ�Sરાત૬ (Gujarati)"), /*#__PURE__*/React.createElement("option", {
     value: "kn"
-  }, "à²•à²¨à³à²¨à²¡ (Kannada)"), /*#__PURE__*/React.createElement("option", {
+  }, "�"ನ್ನಡ (Kannada)"), /*#__PURE__*/React.createElement("option", {
     value: "ml"
-  }, "à´®à´²à´¯à´¾à´³à´‚ (Malayalam)"), /*#__PURE__*/React.createElement("option", {
+  }, "മലയാള� (Malayalam)"), /*#__PURE__*/React.createElement("option", {
     value: "pa"
-  }, "à¨ªà©°à¨œà¨¾à¨¬à©€ (Punjabi)"), /*#__PURE__*/React.createElement("option", {
+  }, "ਪੰ�Sਾਬ੬ (Punjabi)"), /*#__PURE__*/React.createElement("option", {
     value: "ja"
-  }, "æ—¥æœ¬èªž (Japanese)"), /*#__PURE__*/React.createElement("option", {
+  }, "���S��~ (Japanese)"), /*#__PURE__*/React.createElement("option", {
     value: "es"
-  }, "EspaÃ±ol (Spanish)"), /*#__PURE__*/React.createElement("option", {
+  }, "Español (Spanish)"), /*#__PURE__*/React.createElement("option", {
     value: "fr"
-  }, "FranÃ§ais (French)"), /*#__PURE__*/React.createElement("option", {
+  }, "Français (French)"), /*#__PURE__*/React.createElement("option", {
     value: "de"
   }, "Deutsch (German)"), /*#__PURE__*/React.createElement("option", {
     value: "ru"
-  }, "Ð ÑƒÑÑÐºÐ¸Ð¹ (Russian)")), /*#__PURE__*/React.createElement("div", {
+  }, "Рђсский (Russian)")), /*#__PURE__*/React.createElement("div", {
     className: `flex items-center gap-2 px-3 py-1.5 rounded-2xl font-mono shadow-sm ${isLight ? 'bg-orange-50 text-orange-900' : 'bg-orange-950/40 text-orange-400'}`
   }, /*#__PURE__*/React.createElement(Icons.Flame, {
     className: "w-4 h-4 text-orange-400 animate-pulse"
@@ -2934,7 +4235,7 @@ function App() {
     className: `text-xs font-bold ${isLight ? 'text-slate-800' : 'text-slate-200'}`
   }, user.name.split(' ')[0]), /*#__PURE__*/React.createElement("span", {
     className: "text-[10px] text-slate-400"
-  }, "▾")), /*#__PURE__*/React.createElement("button", {
+  }, "��")), /*#__PURE__*/React.createElement("button", {
     onClick: () => {
       setShowTaskModal(true);
       playAudio('click');
@@ -3025,7 +4326,7 @@ function App() {
     className: "flex flex-wrap items-center gap-2"
   }, /*#__PURE__*/React.createElement("span", {
     className: `px-3 py-1 rounded-xl text-[10px] font-black font-mono uppercase tracking-wider shadow-sm ${rankInfo.badge}`
-  }, rankInfo.rank, " • ", rankInfo.title), /*#__PURE__*/React.createElement("span", {
+  }, rankInfo.rank, " ⬢ ", rankInfo.title), /*#__PURE__*/React.createElement("span", {
     className: "px-2.5 py-1 rounded-xl bg-white/10 text-[10px] font-mono font-bold tracking-wider text-white"
   }, currentTheme.name)), /*#__PURE__*/React.createElement("div", {
     className: "flex flex-col sm:flex-row sm:items-baseline gap-2 sm:gap-4"
@@ -3284,7 +4585,7 @@ function App() {
     style: {
       backgroundColor: currentTheme.accent
     }
-  }, t('startSession'), " →"))), /*#__PURE__*/React.createElement("div", {
+  }, t('startSession'), " � "))), /*#__PURE__*/React.createElement("div", {
     className: "glass-surface p-6 sm:p-8 rounded-3xl space-y-5 shadow-xl"
   }, /*#__PURE__*/React.createElement("div", {
     className: "flex flex-col sm:flex-row sm:items-center justify-between gap-4"
@@ -3422,7 +4723,7 @@ function App() {
     className: "text-6xl sm:text-7xl font-black font-mono tracking-tight text-white drop-shadow-lg"
   }, formatTimer(timerSecondsLeft)), /*#__PURE__*/React.createElement("span", {
     className: "text-xs font-mono uppercase tracking-widest text-indigo-300 mt-2"
-  }, isTimerRunning ? 'Session Active • Deep Focus' : 'Ready to Start')), /*#__PURE__*/React.createElement("div", {
+  }, isTimerRunning ? 'Session Active ⬢ Deep Focus' : 'Ready to Start')), /*#__PURE__*/React.createElement("div", {
     className: "flex items-center justify-center gap-4 pt-2"
   }, /*#__PURE__*/React.createElement("button", {
     onClick: resetTimer,
@@ -3524,7 +4825,7 @@ function App() {
     className: "text-xs font-bold text-white"
   }, "@", req.to), /*#__PURE__*/React.createElement("p", {
     className: "text-[10px] text-amber-400 flex items-center gap-1.5 mt-0.5 font-mono"
-  }, /*#__PURE__*/React.createElement("span", null, "â³ Sent"), /*#__PURE__*/React.createElement("span", null, "•"), /*#__PURE__*/React.createElement("span", null, "Awaiting @", req.to, " to log in & accept")))), /*#__PURE__*/React.createElement("button", {
+  }, /*#__PURE__*/React.createElement("span", null, "⏳ Sent"), /*#__PURE__*/React.createElement("span", null, "⬢"), /*#__PURE__*/React.createElement("span", null, "Awaiting @", req.to, " to log in & accept")))), /*#__PURE__*/React.createElement("button", {
     onClick: () => handleCancelOutgoingRequest(req.id),
     className: "px-3 py-1.5 rounded-xl bg-white/5 hover:bg-rose-500/20 text-slate-400 hover:text-rose-400 text-xs transition border border-white/10"
   }, t('cancel')))))), friendRequests.length > 0 && /*#__PURE__*/React.createElement("div", {
@@ -3552,7 +4853,7 @@ function App() {
     className: "font-mono text-slate-400 text-[10px]"
   }, "@", req.fromUser.username)), /*#__PURE__*/React.createElement("p", {
     className: "text-[10px] text-slate-400"
-  }, req.fromUser.degree || 'Student', " • ", req.fromUser.institution || 'University'))), /*#__PURE__*/React.createElement("div", {
+  }, req.fromUser.degree || 'Student', " ⬢ ", req.fromUser.institution || 'University'))), /*#__PURE__*/React.createElement("div", {
     className: "flex items-center gap-2"
   }, /*#__PURE__*/React.createElement("button", {
     onClick: () => handleAcceptFriend(req),
@@ -3725,46 +5026,46 @@ function App() {
     label: 'English'
   }, {
     code: 'mr',
-    label: 'à¤®à¤°à¤¾à¤ à¥€'
+    label: 'मराठ६'
   }, {
     code: 'hi',
-    label: 'à¤¹à¤¿à¤¨à¥à¤¦à¥€'
+    label: 'हिन्द६'
   }, {
     code: 'te',
-    label: 'à°¤à±†à°²à±à°—à±'
+    label: 'త� లు�ు'
   }, {
     code: 'ta',
-    label: 'à®¤à®®à®¿à®´à¯'
+    label: 'தமிழ்'
   }, {
     code: 'bn',
-    label: 'à¦¬à¦¾à¦‚à¦²à¦¾'
+    label: 'বা�লা'
   }, {
     code: 'gu',
-    label: 'àª—à«àªœàª°àª¾àª¤à«€'
+    label: '�ુ�Sરાત૬'
   }, {
     code: 'kn',
-    label: 'à²•à²¨à³à²¨à²¡'
+    label: '�"ನ್ನಡ'
   }, {
     code: 'ml',
-    label: 'à´®à´²à´¯à´¾à´³à´‚'
+    label: 'മലയാള�'
   }, {
     code: 'pa',
-    label: 'à¨ªà©°à¨œà¨¾à¨¬à©€'
+    label: 'ਪੰ�Sਾਬ੬'
   }, {
     code: 'ja',
-    label: 'æ—¥æœ¬èªž'
+    label: '���S��~'
   }, {
     code: 'es',
-    label: 'EspaÃ±ol'
+    label: 'Español'
   }, {
     code: 'fr',
-    label: 'FranÃ§ais'
+    label: 'Français'
   }, {
     code: 'de',
     label: 'Deutsch'
   }, {
     code: 'ru',
-    label: 'Ð ÑƒÑÑÐºÐ¸Ð¹'
+    label: 'Рђсский'
   }].map(lang => /*#__PURE__*/React.createElement("button", {
     key: lang.code,
     onClick: () => {
@@ -3949,7 +5250,7 @@ function App() {
     className: `text-xs mt-1 ${isLight ? 'text-slate-500' : 'text-slate-400'}`
   }, "Non-linear cognitive progression formula: ", /*#__PURE__*/React.createElement("code", {
     className: "text-amber-500 font-mono"
-  }, "100 Ã— Level^1.5"), ".")), /*#__PURE__*/React.createElement("div", {
+  }, "100 � Level^1.5"), ".")), /*#__PURE__*/React.createElement("div", {
     className: "grid grid-cols-1 md:grid-cols-2 gap-6"
   }, Object.keys(DISCIPLINE_CONFIG).map(d => {
     const cfg = DISCIPLINE_CONFIG[d];
@@ -4197,7 +5498,7 @@ function App() {
     className: "text-xs text-indigo-400 font-mono"
   }, "@", user.username), /*#__PURE__*/React.createElement("p", {
     className: `text-xs ${isLight ? 'text-slate-600' : 'text-slate-400'}`
-  }, user.degree, " • ", user.institution))), /*#__PURE__*/React.createElement("button", {
+  }, user.degree, " ⬢ ", user.institution))), /*#__PURE__*/React.createElement("button", {
     onClick: () => setShowRecordModal(false),
     className: "text-slate-400 hover:text-white p-1"
   }, /*#__PURE__*/React.createElement(Icons.Close, {
@@ -4271,7 +5572,7 @@ function App() {
     className: "text-xs font-mono text-indigo-400 font-semibold"
   }, "@", selectedFriend.username), /*#__PURE__*/React.createElement("p", {
     className: `text-xs ${isLight ? 'text-slate-600' : 'text-slate-300'}`
-  }, selectedFriend.degree || 'Computer Science & Engineering', " • ", selectedFriend.institution || 'University'))), /*#__PURE__*/React.createElement("div", {
+  }, selectedFriend.degree || 'Computer Science & Engineering', " ⬢ ", selectedFriend.institution || 'University'))), /*#__PURE__*/React.createElement("div", {
     className: `p-4 rounded-2xl border space-y-1 ${isLight ? 'bg-slate-50 border-slate-200' : 'bg-slate-900/60 border-white/5'}`
   }, /*#__PURE__*/React.createElement("span", {
     className: "text-[9px] font-mono uppercase tracking-wider text-slate-400"
@@ -4321,7 +5622,7 @@ function App() {
     className: "glass-surface w-full max-w-sm rounded-3xl p-8 border border-amber-500/30 text-center space-y-4 shadow-2xl"
   }, /*#__PURE__*/React.createElement("div", {
     className: "text-4xl animate-bounce font-black text-amber-400"
-  }, "▲"), /*#__PURE__*/React.createElement("div", {
+  }, "��"), /*#__PURE__*/React.createElement("div", {
     className: "space-y-1"
   }, /*#__PURE__*/React.createElement("span", {
     className: "text-[9px] font-mono uppercase tracking-widest text-amber-400"
