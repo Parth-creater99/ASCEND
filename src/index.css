@@ -1,0 +1,255 @@
+﻿@tailwind base;
+@tailwind components;
+@tailwind utilities;
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+    ::-webkit-scrollbar { width: 6px; height: 6px; }
+    ::-webkit-scrollbar-track { background: transparent; }
+    ::-webkit-scrollbar-thumb { background: rgba(120, 130, 150, 0.35); border-radius: 9999px; }
+    ::-webkit-scrollbar-thumb:hover { background: rgba(140, 150, 180, 0.6); }
+
+    /* Dark Mode Mesh Gradients */
+    
+    /* DYNAMIC REGIONAL LANGUAGE TYPOGRAPHY */
+    body.lang-mr, body.lang-hi, .lang-mr, .lang-hi {
+      font-family: 'Noto Sans Devanagari', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+    }
+    body.lang-te, .lang-te {
+      font-family: 'Noto Sans Telugu', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+    }
+    body.lang-ta, .lang-ta {
+      font-family: 'Noto Sans Tamil', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+    }
+    body.lang-bn, .lang-bn {
+      font-family: 'Noto Sans Bengali', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+    }
+    body.lang-gu, .lang-gu {
+      font-family: 'Noto Sans Gujarati', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+    }
+    body.lang-kn, .lang-kn {
+      font-family: 'Noto Sans Kannada', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+    }
+    body.lang-ml, .lang-ml {
+      font-family: 'Noto Sans Malayalam', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+    }
+    body.lang-pa, .lang-pa {
+      font-family: 'Noto Sans Gurmukhi', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+    }
+    body.lang-ja, .lang-ja {
+      font-family: 'Noto Sans JP', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+    }
+
+    /* NEW LEGENDARY THEMES: DARK OLED MESH */
+    .theme-dark.bg-theme-jjk {
+      background: radial-gradient(circle at 15% 15%, rgba(6, 182, 212, 0.25) 0%, transparent 45%),
+                  radial-gradient(circle at 85% 75%, rgba(99, 102, 241, 0.20) 0%, transparent 45%),
+                  #040711;
+    }
+    .theme-dark.bg-theme-demon_slayer {
+      background: radial-gradient(circle at 15% 15%, rgba(225, 29, 72, 0.25) 0%, transparent 45%),
+                  radial-gradient(circle at 85% 75%, rgba(245, 158, 11, 0.18) 0%, transparent 45%),
+                  #0a0305;
+    }
+    .theme-dark.bg-theme-dragonball {
+      background: radial-gradient(circle at 15% 15%, rgba(56, 189, 248, 0.25) 0%, transparent 45%),
+                  radial-gradient(circle at 85% 75%, rgba(168, 85, 247, 0.20) 0%, transparent 45%),
+                  #040813;
+    }
+    .theme-dark.bg-theme-death_note {
+      background: radial-gradient(circle at 15% 15%, rgba(148, 163, 184, 0.18) 0%, transparent 45%),
+                  radial-gradient(circle at 85% 75%, rgba(100, 116, 139, 0.14) 0%, transparent 45%),
+                  #050508;
+    }
+    .theme-dark.bg-theme-cyberpunk {
+      background: radial-gradient(circle at 15% 15%, rgba(234, 179, 8, 0.22) 0%, transparent 45%),
+                  radial-gradient(circle at 85% 75%, rgba(6, 182, 212, 0.20) 0%, transparent 45%),
+                  #070702;
+    }
+
+    /* NEW LEGENDARY THEMES: LIGHT MODE */
+    .theme-light.bg-theme-jjk {
+      background: radial-gradient(circle at 15% 15%, rgba(6, 182, 212, 0.10) 0%, transparent 45%),
+                  radial-gradient(circle at 85% 75%, rgba(99, 102, 241, 0.08) 0%, transparent 45%),
+                  #f8fafc;
+    }
+    .theme-light.bg-theme-demon_slayer {
+      background: radial-gradient(circle at 15% 15%, rgba(225, 29, 72, 0.10) 0%, transparent 45%),
+                  radial-gradient(circle at 85% 75%, rgba(245, 158, 11, 0.08) 0%, transparent 45%),
+                  #f8fafc;
+    }
+    .theme-light.bg-theme-dragonball {
+      background: radial-gradient(circle at 15% 15%, rgba(56, 189, 248, 0.10) 0%, transparent 45%),
+                  radial-gradient(circle at 85% 75%, rgba(168, 85, 247, 0.08) 0%, transparent 45%),
+                  #f8fafc;
+    }
+    .theme-light.bg-theme-death_note {
+      background: radial-gradient(circle at 15% 15%, rgba(148, 163, 184, 0.10) 0%, transparent 45%),
+                  radial-gradient(circle at 85% 75%, rgba(100, 116, 139, 0.08) 0%, transparent 45%),
+                  #f8fafc;
+    }
+    .theme-light.bg-theme-cyberpunk {
+      background: radial-gradient(circle at 15% 15%, rgba(234, 179, 8, 0.10) 0%, transparent 45%),
+                  radial-gradient(circle at 85% 75%, rgba(6, 182, 212, 0.08) 0%, transparent 45%),
+                  #f8fafc;
+    }
+
+    .theme-dark.bg-theme-solo_leveling {
+      background: radial-gradient(circle at 15% 15%, rgba(139, 92, 246, 0.22) 0%, transparent 45%),
+                  radial-gradient(circle at 85% 75%, rgba(59, 130, 246, 0.16) 0%, transparent 45%),
+                  #07060e;
+    }
+    .theme-dark.bg-theme-spiderman {
+      background: radial-gradient(circle at 15% 15%, rgba(239, 68, 68, 0.22) 0%, transparent 45%),
+                  radial-gradient(circle at 85% 75%, rgba(37, 99, 235, 0.18) 0%, transparent 45%),
+                  #0a0507;
+    }
+    .theme-dark.bg-theme-naruto {
+      background: radial-gradient(circle at 15% 15%, rgba(249, 115, 22, 0.22) 0%, transparent 45%),
+                  radial-gradient(circle at 85% 75%, rgba(234, 179, 8, 0.16) 0%, transparent 45%),
+                  #0b0704;
+    }
+    .theme-dark.bg-theme-aot {
+      background: radial-gradient(circle at 15% 15%, rgba(16, 185, 129, 0.20) 0%, transparent 45%),
+                  radial-gradient(circle at 85% 75%, rgba(217, 119, 6, 0.16) 0%, transparent 45%),
+                  #050a07;
+    }
+    .theme-dark.bg-theme-ironman {
+      background: radial-gradient(circle at 15% 15%, rgba(245, 158, 11, 0.22) 0%, transparent 45%),
+                  radial-gradient(circle at 85% 75%, rgba(225, 29, 72, 0.18) 0%, transparent 45%),
+                  #0d0607;
+    }
+    .theme-dark.bg-theme-synth_statue {
+      background: radial-gradient(circle at 15% 15%, rgba(236, 72, 153, 0.22) 0%, transparent 45%),
+                  radial-gradient(circle at 85% 75%, rgba(6, 182, 212, 0.18) 0%, transparent 45%),
+                  #070712;
+    }
+
+    /* Light Mode Clean Apple/Pinterest Aesthetic */
+    .theme-light {
+      background-color: #f8fafc;
+      color: #0f172a;
+    }
+    .theme-light.bg-theme-solo_leveling {
+      background: radial-gradient(circle at 15% 15%, rgba(139, 92, 246, 0.10) 0%, transparent 45%),
+                  radial-gradient(circle at 85% 75%, rgba(59, 130, 246, 0.06) 0%, transparent 45%),
+                  #f8fafc;
+    }
+    .theme-light.bg-theme-spiderman {
+      background: radial-gradient(circle at 15% 15%, rgba(239, 68, 68, 0.08) 0%, transparent 45%),
+                  radial-gradient(circle at 85% 75%, rgba(37, 99, 235, 0.06) 0%, transparent 45%),
+                  #f8fafc;
+    }
+    .theme-light.bg-theme-naruto {
+      background: radial-gradient(circle at 15% 15%, rgba(249, 115, 22, 0.08) 0%, transparent 45%),
+                  radial-gradient(circle at 85% 75%, rgba(234, 179, 8, 0.06) 0%, transparent 45%),
+                  #f8fafc;
+    }
+    .theme-light.bg-theme-aot {
+      background: radial-gradient(circle at 15% 15%, rgba(16, 185, 129, 0.08) 0%, transparent 45%),
+                  radial-gradient(circle at 85% 75%, rgba(217, 119, 6, 0.06) 0%, transparent 45%),
+                  #f8fafc;
+    }
+    .theme-light.bg-theme-ironman {
+      background: radial-gradient(circle at 15% 15%, rgba(245, 158, 11, 0.08) 0%, transparent 45%),
+                  radial-gradient(circle at 85% 75%, rgba(225, 29, 72, 0.06) 0%, transparent 45%),
+                  #f8fafc;
+    }
+    .theme-light.bg-theme-synth_statue {
+      background: radial-gradient(circle at 15% 15%, rgba(236, 72, 153, 0.08) 0%, transparent 45%),
+                  radial-gradient(circle at 85% 75%, rgba(6, 182, 212, 0.06) 0%, transparent 45%),
+                  #f8fafc;
+    }
+
+    /* Glass Surfaces: Hand-Crafted Borderless Depth */
+    .theme-dark .glass-surface {
+      background: rgba(18, 22, 34, 0.72);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: none;
+      box-shadow: 0 14px 34px -10px rgba(0, 0, 0, 0.55);
+    }
+    .theme-dark .glass-dock {
+      background: rgba(12, 16, 26, 0.92);
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+      border: none;
+      box-shadow: 0 18px 42px -10px rgba(0, 0, 0, 0.65);
+    }
+
+    .theme-light .glass-surface {
+      background: rgba(255, 255, 255, 0.88);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: none;
+      box-shadow: 0 10px 30px -10px rgba(148, 163, 184, 0.22);
+    }
+    .theme-light .glass-dock {
+      background: rgba(255, 255, 255, 0.96);
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+      border: none;
+      box-shadow: 0 12px 36px -10px rgba(148, 163, 184, 0.25);
+    }
+
+    @keyframes floatXp {
+      0% { opacity: 0; transform: translateY(12px) scale(0.85); }
+      15% { opacity: 1; transform: translateY(0px) scale(1.15); }
+      75% { opacity: 1; transform: translateY(-24px) scale(1); }
+      100% { opacity: 0; transform: translateY(-44px) scale(0.9); }
+    }
+    .animate-float-xp {
+      animation: floatXp 2.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+      pointer-events: none;
+    }
+
+    /* Stacked 3D Card Layers (Screenshot Reference) */
+    .stacked-card-wrapper { position: relative; }
+    .stacked-layer-1 {
+      position: absolute;
+      top: -6px;
+      right: -6px;
+      left: 6px;
+      bottom: 6px;
+      border-radius: 1.5rem;
+      transform: rotate(2deg);
+      z-index: 1;
+      opacity: 0.7;
+      pointer-events: none;
+      transition: all 0.3s ease;
+    }
+    .stacked-layer-2 {
+      position: absolute;
+      top: -12px;
+      right: -12px;
+      left: 12px;
+      bottom: 12px;
+      border-radius: 1.5rem;
+      transform: rotate(4deg);
+      z-index: 0;
+      opacity: 0.4;
+      pointer-events: none;
+      transition: all 0.3s ease;
+    }
+    .stacked-card-wrapper:hover .stacked-layer-1 {
+      transform: rotate(3.5deg) translate(2px, -2px);
+      opacity: 0.85;
+    }
+    .stacked-card-wrapper:hover .stacked-layer-2 {
+      transform: rotate(6deg) translate(4px, -4px);
+      opacity: 0.6;
+    }
+    .stacked-card-front { position: relative; z-index: 2; }
+
+    .no-scrollbar::-webkit-scrollbar { display: none; }
+    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    @keyframes slideIn { from { transform: translateX(120%) scale(0.95); opacity: 0; } to { transform: translateX(0) scale(1); opacity: 1; } }
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    .animate-slideIn { animation: slideIn 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+    .animate-fadeIn { animation: fadeIn 0.25s ease-out forwards; }
+  
+
