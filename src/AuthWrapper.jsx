@@ -36,7 +36,7 @@ export default function AuthWrapper() {
     setLoading(true);
     setError('');
     
-    const apiUrl = import.meta.env.VITE_API_URL || '/api';
+    const apiUrl = import.meta.env.VITE_API_URL || '';
     const endpoint = isLogin ? '/api/auth/login' : '/api/auth/register';
     
     try {

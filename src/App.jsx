@@ -153,8 +153,11 @@ function getDB() {
 }
 async function dbRead(key, fallback = null) {
   try {
-    const apiUrl = import.meta.env.VITE_API_URL || '/api';
-    const res = await fetch(`${apiUrl}/api/store/${key}`);
+    const apiUrl = import.meta.env.VITE_API_URL || '';
+    const token = localStorage.getItem('ascend_token');
+    const res = await fetch(`${apiUrl}/api/store/${key}`, {
+      headers: { 'Authorization': `Bearer ${token}` }
+    });
     if (!res.ok) return fallback;
     const json = await res.json();
     return json.value !== null ? json.value : fallback;
@@ -165,10 +168,14 @@ async function dbRead(key, fallback = null) {
 }
 async function dbWrite(key, value) {
   try {
-    const apiUrl = import.meta.env.VITE_API_URL || '/api';
+    const apiUrl = import.meta.env.VITE_API_URL || '';
+    const token = localStorage.getItem('ascend_token');
     const res = await fetch(`${apiUrl}/api/store/${key}`, {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+      headers: { 
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${token}`
+      },
       body: JSON.stringify({ value })
     });
     return res.ok;
