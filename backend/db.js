@@ -1,14 +1,40 @@
-import mongoose from 'mongoose';
+import pg from 'pg';
 import dotenv from 'dotenv';
 dotenv.config();
 
+const { Pool } = pg;
+
+// Connection string should come from Render environment variables
+const connectionString = process.env.DATABASE_URL || 'postgresql://localhost:5432/ascend';
+
+export const pool = new Pool({
+  connectionString,
+  // Render PostgreSQL requires SSL when connecting from outside or some internal configs
+  ssl: process.env.DATABASE_URL ? { rejectUnauthorized: false } : false
+});
+
 export const connectDB = async () => {
   try {
-    const conn = await mongoose.connect(process.env.MONGO_URI || 'mongodb://localhost:27017/ascend');
-    console.log(`MongoDB Connected: ${conn.connection.host}`);
-  } catch (error) {
-    console.error(`Error connecting to MongoDB: ${error.message}`);
-    console.error("Please check your MONGO_URI environment variable on Render!");
-    // Do not exit process, let Express continue running so it can serve API errors instead of 502s
+    const client = await pool.connect();
+    console.log("PostgreSQL Connected successfully");
+    
+    // Auto-create tables if they don't exist
+    await client.query(`
+      CREATE TABLE IF NOT EXISTS users (
+        id SERIAL PRIMARY KEY,
+        username VARCHAR(255) UNIQUE NOT NULL,
+        password VARCHAR(255) NOT NULL
+      );
+      CREATE TABLE IF NOT EXISTS store (
+        id SERIAL PRIMARY KEY,
+        user_id INTEGER REFERENCES users(id),
+        key VARCHAR(255) NOT NULL,
+        value JSONB NOT NULL,
+        UNIQUE(user_id, key)
+      );
+    `);
+    client.release();
+  } catch (err) {
+    console.error("Failed to connect to PostgreSQL or create tables", err);
   }
 };
