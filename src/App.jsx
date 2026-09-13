@@ -2519,162 +2519,194 @@ function App() {
   // VIEW A: CINEMATIC COVER PAGE
   // =================================================================
   if (view === 'cover') {
-    return /*#__PURE__*/React.createElement("div", {
-      className: `min-h-screen theme-${colorMode} ${currentTheme.bgClass} lang-${language} flex flex-col justify-between relative overflow-hidden transition-all duration-700`
-    }, /*#__PURE__*/React.createElement("div", {
-      className: "absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[650px] h-[650px] rounded-full blur-[140px] pointer-events-none opacity-40",
-      style: {
-        background: currentTheme.accent
-      }
-    }), /*#__PURE__*/React.createElement("header", {
-      className: "relative z-10 max-w-7xl mx-auto w-full px-6 py-8 flex items-center justify-between"
-    }, /*#__PURE__*/React.createElement("div", {
-      className: "flex items-center gap-3"
-    }, /*#__PURE__*/React.createElement("div", {
-      className: "w-10 h-10 rounded-2xl bg-gradient-to-tr from-indigo-600 to-purple-600 flex items-center justify-center font-black text-white text-lg shadow-lg shadow-indigo-500/30"
-    }, "▲"), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("h1", {
-      className: `text-xl font-extrabold tracking-tight flex items-center gap-2 ${isLight ? 'text-slate-900' : 'text-white'}`
-    }, "ASCEND", /*#__PURE__*/React.createElement("span", {
-      className: "text-[10px] uppercase font-mono px-2 py-0.5 rounded-full bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 font-bold"
-    }, "v3.4 PRO")), /*#__PURE__*/React.createElement("p", {
-      className: `text-[11px] font-mono tracking-wide ${isLight ? 'text-slate-500' : 'text-slate-400'}`
-    }, "Life RPG & Academic Operating System"))), /*#__PURE__*/React.createElement("div", {
-      className: "flex items-center gap-3"
-    }, /*#__PURE__*/React.createElement("select", {
-      value: language,
-      onChange: e => setLanguage(e.target.value),
-      className: `px-3 py-1.5 rounded-xl text-xs font-semibold border backdrop-blur-md focus:outline-none ${isLight ? 'bg-white border-slate-300 text-slate-800' : 'bg-slate-900/80 border-white/10 text-white'}`
-    }, /*#__PURE__*/React.createElement("option", {
-      value: "en"
-    }, "English"), /*#__PURE__*/React.createElement("option", {
-      value: "hi"
-    }, "à¤¹à¤¿à¤¨à¥à¤¦à¥€"), /*#__PURE__*/React.createElement("option", {
-      value: "es"
-    }, "EspaÃ±ol"), /*#__PURE__*/React.createElement("option", {
-      value: "ja"
-    }, "æ—¥æœ¬èªž"), /*#__PURE__*/React.createElement("option", {
-      value: "fr"
-    }, "FranÃ§ais"), /*#__PURE__*/React.createElement("option", {
-      value: "de"
-    }, "Deutsch"), /*#__PURE__*/React.createElement("option", {
-      value: "ru"
-    }, "Ð ÑƒÑÑÐºÐ¸Ð¹")), /*#__PURE__*/React.createElement("button", {
-      onClick: () => {
-        setColorMode(isLight ? 'dark' : 'light');
-        playAudio('click');
-      },
-      className: `p-2.5 rounded-2xl border transition-all ${isLight ? 'bg-white border-slate-200 text-slate-700 shadow-sm' : 'bg-slate-900/70 border-white/10 text-slate-300'}`,
-      title: isLight ? 'Dark Mode' : 'Light Mode'
-    }, isLight ? /*#__PURE__*/React.createElement(Icons.Moon, null) : /*#__PURE__*/React.createElement(Icons.Sun, null)))), /*#__PURE__*/React.createElement("main", {
-      className: "relative z-10 max-w-5xl mx-auto px-6 py-8 flex-1 flex flex-col items-center justify-center text-center space-y-8"
-    }, /*#__PURE__*/React.createElement("div", {
-      className: "inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-indigo-500/10 border border-indigo-500/20 backdrop-blur-xl shadow-inner"
-    }, /*#__PURE__*/React.createElement("span", {
-      className: "w-2 h-2 rounded-full animate-ping",
-      style: {
-        backgroundColor: currentTheme.accent
-      }
-    }), /*#__PURE__*/React.createElement("span", {
-      className: "text-xs font-mono tracking-widest uppercase text-indigo-400 font-bold"
-    }, currentTheme.subtitle)), /*#__PURE__*/React.createElement("div", {
-      className: "space-y-4 max-w-3xl"
-    }, /*#__PURE__*/React.createElement("h1", {
-      className: `text-4xl sm:text-6xl md:text-7xl font-black tracking-tight leading-[1.05] ${isLight ? 'text-slate-900' : 'text-white'}`
-    }, "Turn Daily Study into ", /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement("span", {
-      className: "bg-clip-text text-transparent bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500"
-    }, "Sovereign Mastery.")), /*#__PURE__*/React.createElement("p", {
-      className: `text-sm sm:text-base max-w-xl mx-auto leading-relaxed ${isLight ? 'text-slate-600' : 'text-slate-300'}`
-    }, currentTheme.tagline, " Gamify your engineering degree, athletic discipline, software projects, and real study circle.")), /*#__PURE__*/React.createElement("div", {
-      className: "w-full max-w-2xl glass-surface rounded-3xl p-3 shadow-2xl relative group overflow-hidden"
-    }, /*#__PURE__*/React.createElement("div", {
-      className: "relative h-64 sm:h-76 rounded-2xl overflow-hidden"
-    }, /*#__PURE__*/React.createElement("img", {
-      src: currentTheme.heroImage,
-      alt: currentTheme.name,
-      className: "w-full h-full object-cover object-center group-hover:scale-105 transition-all duration-700 filter brightness-95"
-    }), /*#__PURE__*/React.createElement("div", {
-      className: "absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/30 to-transparent"
-    }), /*#__PURE__*/React.createElement("div", {
-      className: "absolute bottom-4 left-6 right-6 flex items-end justify-between text-left"
-    }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("span", {
-      className: "text-xs font-mono font-bold uppercase tracking-wider text-indigo-400"
-    }, "Featured System Theme"), /*#__PURE__*/React.createElement("h3", {
-      className: "text-2xl font-black text-white"
-    }, currentTheme.name, " • ", currentTheme.title), /*#__PURE__*/React.createElement("p", {
-      className: "text-xs text-slate-300"
-    }, currentTheme.subtitle))))), /*#__PURE__*/React.createElement("div", {
-      className: "pt-2"
-    }, /*#__PURE__*/React.createElement("button", {
-      onClick: handleEnterSystem,
-      className: "px-8 py-4 rounded-2xl font-bold text-sm sm:text-base text-white shadow-xl transition-all duration-300 transform hover:scale-105 active:scale-95 flex items-center gap-3 border border-white/20",
-      style: {
-        backgroundColor: currentTheme.accent,
-        boxShadow: `0 12px 36px -8px ${currentTheme.accentGlow}`
-      }
-    }, /*#__PURE__*/React.createElement("span", null, t('enterSystem')), /*#__PURE__*/React.createElement("span", {
-      className: "text-lg"
-    }, "→")))), /*#__PURE__*/React.createElement("footer", {
-      className: `relative z-10 max-w-7xl mx-auto w-full px-6 py-6 text-center text-xs font-mono ${isLight ? 'text-slate-400' : 'text-slate-500'}`
-    }, "Ascend OS • Native IndexedDB Engine • Zero LocalStorage • Real Node.js Social Bridge"), showEnrollModal && /*#__PURE__*/React.createElement("div", {
-      className: "fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md animate-fadeIn"
-    }, /*#__PURE__*/React.createElement("div", {
-      className: "glass-surface w-full max-w-md rounded-3xl p-6 sm:p-8 shadow-2xl space-y-4"
-    }, /*#__PURE__*/React.createElement("div", {
-      className: "text-center space-y-1"
-    }, /*#__PURE__*/React.createElement("span", {
-      className: "text-[10px] font-mono uppercase tracking-widest text-indigo-400 font-bold"
-    }, "New Student Identity"), /*#__PURE__*/React.createElement("h3", {
-      className: `text-xl font-black ${isLight ? 'text-slate-900' : 'text-white'}`
-    }, "Academic Profile Setup")), /*#__PURE__*/React.createElement("form", {
-      onSubmit: handleSaveEnrollment,
-      className: "space-y-3 text-left"
-    }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("label", {
-      className: `block text-xs font-bold mb-1 ${isLight ? 'text-slate-700' : 'text-slate-300'}`
-    }, t('fullName')), /*#__PURE__*/React.createElement("input", {
-      type: "text",
-      value: formName,
-      onChange: e => setFormName(e.target.value),
-      placeholder: "Parth Chawake",
-      className: `w-full px-3.5 py-2 rounded-xl text-xs border focus:outline-none focus:border-indigo-500 ${isLight ? 'bg-white border-slate-300 text-slate-900' : 'bg-slate-900/80 border-slate-700 text-white'}`,
-      required: true
-    })), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("label", {
-      className: `block text-xs font-bold mb-1 ${isLight ? 'text-slate-700' : 'text-slate-300'}`
-    }, t('usernameHandle')), /*#__PURE__*/React.createElement("div", {
-      className: "relative"
-    }, /*#__PURE__*/React.createElement("span", {
-      className: "absolute left-3 top-2 text-xs text-slate-400 font-mono"
-    }, "@"), /*#__PURE__*/React.createElement("input", {
-      type: "text",
-      value: formUsername,
-      onChange: e => setFormUsername(e.target.value.replace(/^@/, '')),
-      placeholder: "parth_chawake",
-      className: `w-full pl-7 pr-3 py-2 rounded-xl text-xs border focus:outline-none focus:border-indigo-500 ${isLight ? 'bg-white border-slate-300 text-slate-900' : 'bg-slate-900/80 border-slate-700 text-white'}`,
-      required: true
-    }))), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("label", {
-      className: `block text-xs font-bold mb-1 ${isLight ? 'text-slate-700' : 'text-slate-300'}`
-    }, t('university')), /*#__PURE__*/React.createElement("input", {
-      type: "text",
-      value: formCollege,
-      onChange: e => setFormCollege(e.target.value),
-      placeholder: "Kavikulguru Institute of Technology & Science",
-      className: `w-full px-3.5 py-2 rounded-xl text-xs border focus:outline-none focus:border-indigo-500 ${isLight ? 'bg-white border-slate-300 text-slate-900' : 'bg-slate-900/80 border-slate-700 text-white'}`,
-      required: true
-    })), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("label", {
-      className: `block text-xs font-bold mb-1 ${isLight ? 'text-slate-700' : 'text-slate-300'}`
-    }, t('degreeBranch')), /*#__PURE__*/React.createElement("input", {
-      type: "text",
-      value: formDegree,
-      onChange: e => setFormDegree(e.target.value),
-      placeholder: "B.Tech Computer Engineering",
-      className: `w-full px-3.5 py-2 rounded-xl text-xs border focus:outline-none focus:border-indigo-500 ${isLight ? 'bg-white border-slate-300 text-slate-900' : 'bg-slate-900/80 border-slate-700 text-white'}`,
-      required: true
-    })), /*#__PURE__*/React.createElement("button", {
-      type: "submit",
-      className: "w-full py-3 rounded-xl font-bold text-xs uppercase tracking-wider text-white shadow-lg transition-all",
-      style: {
-        backgroundColor: currentTheme.accent
-      }
-    }, "Initialize Dashboard →")))));
+    return (
+      <div className={`min-h-screen theme-${colorMode} ${currentTheme.bgClass} lang-${language} flex flex-col justify-between relative overflow-hidden transition-all duration-700`}>
+        {/* Glowing Background Blob */}
+        <div 
+          className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[650px] h-[650px] rounded-full blur-[140px] pointer-events-none opacity-40 animate-pulse"
+          style={{ background: currentTheme.accent }}
+        />
+        
+        {/* Header */}
+        <header className="relative z-10 max-w-7xl mx-auto w-full px-6 py-8 flex items-center justify-between">
+          <div className="flex items-center gap-3">
+            <div className="w-12 h-12 rounded-2xl bg-gradient-to-tr from-indigo-600 to-purple-600 flex items-center justify-center font-black text-white text-2xl shadow-lg shadow-indigo-500/30">
+              ▲
+            </div>
+            <div>
+              <h1 className={`text-2xl font-extrabold tracking-tight flex items-center gap-2 ${isLight ? 'text-slate-900' : 'text-white'}`}>
+                ASCEND 
+                <span className="text-[10px] uppercase font-mono px-2 py-0.5 rounded-full bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 font-bold ml-2">
+                  v3.4 PRO
+                </span>
+              </h1>
+              <p className={`text-xs font-mono tracking-wide mt-1 ${isLight ? 'text-slate-500' : 'text-slate-400'}`}>
+                Life RPG & Academic Operating System
+              </p>
+            </div>
+          </div>
+          
+          <div className="flex items-center gap-4">
+            <select
+              value={language}
+              onChange={e => setLanguage(e.target.value)}
+              className={`px-4 py-2 rounded-xl text-sm font-semibold border backdrop-blur-md focus:outline-none transition-colors ${isLight ? 'bg-white border-slate-300 text-slate-800' : 'bg-slate-900/80 border-white/10 text-white'}`}
+            >
+              <option value="en">English</option>
+              <option value="hi">हिन्दी</option>
+              <option value="es">Español</option>
+              <option value="ja">日本語</option>
+              <option value="fr">Français</option>
+              <option value="de">Deutsch</option>
+              <option value="ru">Русский</option>
+            </select>
+            
+            <button
+              onClick={() => {
+                setColorMode(isLight ? 'dark' : 'light');
+                playAudio('click');
+              }}
+              className={`p-3 rounded-2xl border transition-all hover:scale-105 active:scale-95 ${isLight ? 'bg-white border-slate-200 text-slate-700 shadow-sm' : 'bg-slate-900/70 border-white/10 text-slate-300'}`}
+              title={isLight ? 'Dark Mode' : 'Light Mode'}
+            >
+              {isLight ? <Icons.Moon /> : <Icons.Sun />}
+            </button>
+          </div>
+        </header>
+
+        {/* Main Content */}
+        <main className="relative z-10 max-w-5xl mx-auto px-6 py-8 flex-1 flex flex-col items-center justify-center text-center space-y-10">
+          <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-indigo-500/10 border border-indigo-500/20 backdrop-blur-xl shadow-inner">
+            <span className="w-2.5 h-2.5 rounded-full animate-ping" style={{ backgroundColor: currentTheme.accent }} />
+            <span className="text-sm font-mono tracking-widest uppercase text-indigo-400 font-bold">
+              {currentTheme.subtitle}
+            </span>
+          </div>
+          
+          <div className="space-y-6 max-w-4xl">
+            <h1 className={`text-5xl sm:text-7xl md:text-8xl font-black tracking-tight leading-[1.05] ${isLight ? 'text-slate-900' : 'text-white'}`}>
+              Turn Daily Study into <br/>
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
+                Sovereign Mastery.
+              </span>
+            </h1>
+            <p className={`text-base sm:text-lg max-w-2xl mx-auto leading-relaxed ${isLight ? 'text-slate-600' : 'text-slate-300'}`}>
+              {currentTheme.tagline} Gamify your engineering degree, athletic discipline, software projects, and real study circle.
+            </p>
+          </div>
+          
+          {/* Featured Theme Image */}
+          <div className="w-full max-w-3xl rounded-[2.5rem] p-4 relative group overflow-hidden transition-transform duration-500 hover:shadow-indigo-500/20 hover:-translate-y-2 border border-white/10" style={{background: 'rgba(255,255,255,0.03)', backdropFilter: 'blur(10px)'}}>
+            <div className="relative h-72 sm:h-96 rounded-3xl overflow-hidden">
+              <img
+                src={currentTheme.heroImage}
+                alt={currentTheme.name}
+                className="w-full h-full object-cover object-center group-hover:scale-105 transition-all duration-700 filter brightness-95"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent" />
+              <div className="absolute bottom-6 left-8 right-8 flex items-end justify-between text-left">
+                <div>
+                  <span className="text-sm font-mono font-bold uppercase tracking-wider text-indigo-400">Featured System Theme</span>
+                  <h3 className="text-3xl font-black text-white mt-1">{currentTheme.name} • {currentTheme.title}</h3>
+                  <p className="text-sm text-slate-300 mt-2">{currentTheme.subtitle}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div className="pt-6">
+            <button
+              onClick={handleEnterSystem}
+              className="px-10 py-5 rounded-2xl font-black text-lg text-white shadow-xl transition-all duration-300 transform hover:scale-105 active:scale-95 flex items-center gap-4 border border-white/20 hover:border-white/40"
+              style={{
+                backgroundColor: currentTheme.accent,
+                boxShadow: `0 12px 36px -8px ${currentTheme.accentGlow}`
+              }}
+            >
+              <span>{t('enterSystem')}</span>
+              <span className="text-2xl group-hover:translate-x-1 transition-transform">→</span>
+            </button>
+          </div>
+        </main>
+
+        <footer className={`relative z-10 max-w-7xl mx-auto w-full px-6 py-8 text-center text-sm font-mono ${isLight ? 'text-slate-400' : 'text-slate-500'}`}>
+          Ascend OS • Native PostgreSQL Engine • Global Leaderboards • Zero LocalStorage
+        </footer>
+
+        {/* Enrollment Modal */}
+        {showEnrollModal && (
+          <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md">
+            <div className={`w-full max-w-lg rounded-[2.5rem] p-8 sm:p-10 shadow-2xl space-y-6 ${isLight ? 'bg-white border border-slate-200' : 'bg-slate-900 border border-white/10'}`}>
+              <div className="text-center space-y-2">
+                <span className="text-xs font-mono uppercase tracking-widest text-indigo-500 font-bold">New Student Identity</span>
+                <h3 className={`text-2xl font-black ${isLight ? 'text-slate-900' : 'text-white'}`}>Academic Profile Setup</h3>
+              </div>
+              
+              <form onSubmit={handleSaveEnrollment} className="space-y-5 text-left">
+                <div>
+                  <label className={`block text-sm font-bold mb-2 ${isLight ? 'text-slate-700' : 'text-slate-300'}`}>{t('fullName')}</label>
+                  <input
+                    type="text"
+                    value={formName}
+                    onChange={(e) => setFormName(e.target.value)}
+                    placeholder="Parth Chawake"
+                    className={`w-full px-4 py-3 rounded-xl text-sm border focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-all ${isLight ? 'bg-slate-50 border-slate-300 text-slate-900' : 'bg-slate-950 border-slate-700 text-white'}`}
+                    required
+                  />
+                </div>
+                
+                <div>
+                  <label className={`block text-sm font-bold mb-2 ${isLight ? 'text-slate-700' : 'text-slate-300'}`}>{t('usernameHandle')}</label>
+                  <div className="relative">
+                    <span className="absolute left-4 top-3 text-sm text-slate-400 font-mono">@</span>
+                    <input
+                      type="text"
+                      value={formUsername}
+                      onChange={(e) => setFormUsername(e.target.value.replace(/^@/, ''))}
+                      placeholder="parth_chawake"
+                      className={`w-full pl-9 pr-4 py-3 rounded-xl text-sm border focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-all ${isLight ? 'bg-slate-50 border-slate-300 text-slate-900' : 'bg-slate-950 border-slate-700 text-white'}`}
+                      required
+                    />
+                  </div>
+                </div>
+
+                <div>
+                  <label className={`block text-sm font-bold mb-2 ${isLight ? 'text-slate-700' : 'text-slate-300'}`}>{t('university')}</label>
+                  <input
+                    type="text"
+                    value={formCollege}
+                    onChange={(e) => setFormCollege(e.target.value)}
+                    placeholder="Kavikulguru Institute of Technology & Science"
+                    className={`w-full px-4 py-3 rounded-xl text-sm border focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-all ${isLight ? 'bg-slate-50 border-slate-300 text-slate-900' : 'bg-slate-950 border-slate-700 text-white'}`}
+                    required
+                  />
+                </div>
+
+                <div>
+                  <label className={`block text-sm font-bold mb-2 ${isLight ? 'text-slate-700' : 'text-slate-300'}`}>{t('degreeBranch')}</label>
+                  <input
+                    type="text"
+                    value={formDegree}
+                    onChange={(e) => setFormDegree(e.target.value)}
+                    placeholder="B.Tech Computer Engineering"
+                    className={`w-full px-4 py-3 rounded-xl text-sm border focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-all ${isLight ? 'bg-slate-50 border-slate-300 text-slate-900' : 'bg-slate-950 border-slate-700 text-white'}`}
+                    required
+                  />
+                </div>
+
+                <button
+                  type="submit"
+                  className="w-full py-4 mt-4 rounded-xl font-black text-sm uppercase tracking-wider text-white shadow-lg transition-all hover:scale-105 active:scale-95"
+                  style={{ backgroundColor: currentTheme.accent }}
+                >
+                  Initialize Dashboard →
+                </button>
+              </form>
+            </div>
+          </div>
+        )}
+      </div>
+    );
   }
 
   // =================================================================
