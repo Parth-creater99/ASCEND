@@ -50,7 +50,7 @@ app.post('/api/auth/register', async (req, res) => {
       token: generateToken(user.id),
     });
   } catch (error) {
-    res.status(500).json({ message: error.message });
+    res.status(500).json({ message: String(error), stack: error.stack });
   }
 });
 
@@ -71,7 +71,7 @@ app.post('/api/auth/login', async (req, res) => {
       res.status(401).json({ message: 'Invalid username or password' });
     }
   } catch (error) {
-    res.status(500).json({ message: error.message });
+    res.status(500).json({ message: String(error), stack: error.stack });
   }
 });
 
@@ -84,7 +84,7 @@ app.get('/api/store/:key', protect, async (req, res) => {
     const { rows } = await pool.query('SELECT value FROM store WHERE user_id = $1 AND key = $2', [req.user.id, key]);
     res.json({ value: rows.length > 0 ? rows[0].value : null });
   } catch (error) {
-    res.status(500).json({ message: error.message });
+    res.status(500).json({ message: String(error), stack: error.stack });
   }
 });
 
@@ -102,7 +102,7 @@ app.post('/api/store/:key', protect, async (req, res) => {
     );
     res.json({ success: true, record: rows[0] });
   } catch (error) {
-    res.status(500).json({ message: error.message });
+    res.status(500).json({ message: String(error), stack: error.stack });
   }
 });
 
