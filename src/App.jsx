@@ -153,34 +153,17 @@ function getDB() {
 }
 async function dbRead(key, fallback = null) {
   try {
-    const apiUrl = import.meta.env.VITE_API_URL || '';
-    const token = localStorage.getItem('ascend_token');
-    const res = await fetch(`${apiUrl}/api/store/${key}`, {
-      headers: { 'Authorization': `Bearer ${token}` }
-    });
-    if (!res.ok) return fallback;
-    const json = await res.json();
-    return json.value !== null ? json.value : fallback;
+    const val = localStorage.getItem(key);
+    return val ? JSON.parse(val) : fallback;
   } catch (err) {
-    console.error(err);
     return fallback;
   }
 }
 async function dbWrite(key, value) {
   try {
-    const apiUrl = import.meta.env.VITE_API_URL || '';
-    const token = localStorage.getItem('ascend_token');
-    const res = await fetch(`${apiUrl}/api/store/${key}`, {
-      method: 'POST',
-      headers: { 
-        'Content-Type': 'application/json',
-        'Authorization': `Bearer ${token}`
-      },
-      body: JSON.stringify({ value })
-    });
-    return res.ok;
+    localStorage.setItem(key, JSON.stringify(value));
+    return true;
   } catch (err) {
-    console.error(err);
     return false;
   }
 }
@@ -1547,23 +1530,7 @@ function App() {
         if (res.ok) {
           setServerConnected(true);
           // Register current user on server
-          apiFetch('/api/register', {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-              username: user.username,
-              name: user.name,
-              avatar: user.avatar,
-              bio: user.bio,
-              institution: user.institution,
-              degree: user.degree,
-              level: user.level,
-              totalHours: (activityLog.reduce((a, b) => a + (b.durationMin || 0), 0) / 60).toFixed(1),
-              isStudying: isTimerRunning
-            })
-          });
+          // Backend API removed - completely local now
 
           // Fetch Network Info
           apiFetch('/api/network').then(res => {
@@ -1909,13 +1876,7 @@ function App() {
         }
 
         // Immediately update on server so peers get it on their next 3s poll
-        apiFetch('/api/register', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify(updatedUser)
-        });
+        // Backend API removed - completely local now
         addNotification({
           type: 'system',
           title: 'Profile Picture Updated',
@@ -1962,13 +1923,7 @@ function App() {
         user: updated
       });
     }
-    apiFetch('/api/register', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(updated)
-    });
+    // Backend API removed - completely local now
   };
 
   // Save Settings Profile Edits with Live Server & Peer Sync
@@ -1993,13 +1948,7 @@ function App() {
         user: updated
       });
     }
-    apiFetch('/api/register', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(updated)
-    });
+    // Backend API removed - completely local now
   };
 
   // Add Task
