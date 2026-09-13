@@ -111,7 +111,3 @@ npm run preview
 - [ ] More thorough testing of edge cases (streak resets, friend request flows, etc.).
 - [ ] Expand and clean up translations for the multi-language feature.
 - [ ] Code cleanup — some helper/patch scripts in the repo root (`fix_*.cjs`, `patch_*.cjs`, `test_recovery*.cjs`) were used during development/debugging and can likely be removed in a future cleanup pass.
-
-## License
-
-Not specified. Add a license file if you intend to open-source this project.
