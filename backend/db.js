@@ -7,10 +7,11 @@ const { Pool } = pg;
 // Connection string should come from Render environment variables
 const connectionString = process.env.DATABASE_URL || 'postgresql://localhost:5432/ascend';
 
+// Render Internal Database URLs DO NOT support SSL.
+// Render External Database URLs (which contain onrender.com) REQUIRE SSL.
 export const pool = new Pool({
   connectionString,
-  // Render PostgreSQL requires SSL when connecting from outside or some internal configs
-  ssl: process.env.DATABASE_URL ? { rejectUnauthorized: false } : false
+  ssl: connectionString.includes('onrender.com') ? { rejectUnauthorized: false } : false
 });
 
 export const connectDB = async () => {
