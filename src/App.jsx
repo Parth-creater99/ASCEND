@@ -790,18 +790,18 @@ const THEMES = [{
   accentGlow: 'rgba(245, 158, 11, 0.40)',
   bannerGradient: 'from-amber-950/80 via-rose-950/70 to-slate-950/90',
   strokeColor: '#f59e0b',
-  heroImage: 'https://images.unsplash.com/photo-1635805737707-575885ab0820?auto=format&fit=crop&w=1200&q=80,
-  avatarImage: 'https://images.unsplash.com/photo-1635805737707-575885ab0820?auto=format&fit=crop&w=1200&q=80,
+  heroImage: 'https://images.unsplash.com/photo-1635805737707-575885ab0820?auto=format&fit=crop&w=1200&q=80',
+  avatarImage: 'https://images.unsplash.com/photo-1635805737707-575885ab0820?auto=format&fit=crop&w=1200&q=80',
   tagline: 'I am Iron Man. Relentless engineering, real-world execution.',
   timerWallpapers: [{
     title: 'Stark Hologram Laboratory',
-    url: 'https://images.unsplash.com/photo-1635805737707-575885ab0820?auto=format&fit=crop&w=1200&q=80
+    url: 'https://images.unsplash.com/photo-1635805737707-575885ab0820?auto=format&fit=crop&w=1200&q=80'
   }, {
     title: 'Quantum Arc Reactor Core',
-    url: 'https://images.unsplash.com/photo-1635805737707-575885ab0820?auto=format&fit=crop&w=1200&q=80
+    url: 'https://images.unsplash.com/photo-1635805737707-575885ab0820?auto=format&fit=crop&w=1200&q=80'
   }, {
     title: 'Quantum Tech Workshop',
-    url: 'https://images.unsplash.com/photo-1635805737707-575885ab0820?auto=format&fit=crop&w=1200&q=80
+    url: 'https://images.unsplash.com/photo-1635805737707-575885ab0820?auto=format&fit=crop&w=1200&q=80'
   }]
 }, {
   id: 'synth_statue',
@@ -1361,7 +1361,16 @@ function App() {
           setFormDegree(savedUser.degree);
           setFormYear(savedUser.academicYear);
         }
-        if (savedTasks) setTasks(savedTasks);
+        
+          if (savedTasks && savedTasks.length > 0) {
+            setTasks(savedTasks);
+          } else {
+            setTasks([
+              { id: 'default_1', title: 'Start your first focus session', completed: false, category: 'Productivity' },
+              { id: 'default_2', title: 'Explore the new themes', completed: false, category: 'Exploration' }
+            ]);
+          }
+
         if (savedDisciplines) setDisciplines(savedDisciplines);
         if (savedStreak) setStreak(savedStreak);
         if (savedLog) setActivityLog(savedLog);
@@ -2919,9 +2928,9 @@ function App() {
     className: `text-sm font-bold tracking-wide ${isLight ? 'text-slate-900' : 'text-white'}`
   }, "Famous Anime & Pop-Culture Themes"), /*#__PURE__*/React.createElement("span", {
     className: "text-[10px] font-mono px-2 py-0.5 rounded-full bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 font-bold"
-  }, "1-Click Pinterest Switch")), /*#__PURE__*/React.createElement("p", {
+  }, "1-Click Theme Switch")), /*#__PURE__*/React.createElement("p", {
     className: `text-xs mt-0.5 ${isLight ? 'text-slate-500' : 'text-slate-400'}`
-  }, "Instantly apply famous character aesthetics, Pinterest focus backdrops, accents & soundscapes."))), /*#__PURE__*/React.createElement("div", {
+  }, "Instantly apply famous character aesthetics, custom focus backdrops, accents & soundscapes."))), /*#__PURE__*/React.createElement("div", {
     className: "text-[11px] font-mono text-slate-400 shrink-0"
   }, "Active: ", /*#__PURE__*/React.createElement("span", {
     className: "font-bold text-indigo-400"
@@ -2937,7 +2946,7 @@ function App() {
         addNotification({
           type: 'system',
           title: `Theme Activated: ${theme.name}`,
-          message: `Switched to ${theme.name} (${theme.title}) with customized Pinterest wallpapers and focus aura!`
+          message: `Switched to ${theme.name} (${theme.title}) with customized wallpapers and focus aura!`
         });
       },
       className: `flex items-center gap-3 px-3.5 py-2.5 rounded-2xl border shrink-0 cursor-pointer transition-all duration-300 transform hover:scale-[1.03] ${isSelected ? 'bg-indigo-600/20 border-indigo-500 ring-2 ring-indigo-500/40 shadow-lg' : isLight ? 'bg-white/80 hover:bg-slate-50 border-slate-200 shadow-sm' : 'bg-slate-900/60 hover:bg-slate-800/80 border-white/10'}`,
@@ -3227,7 +3236,7 @@ function App() {
     className: "text-[10px] font-mono text-amber-500 font-bold"
   }, "Pomodoro")), /*#__PURE__*/React.createElement("p", {
     className: `text-xs mt-1 ${isLight ? 'text-slate-600' : 'text-slate-400'}`
-  }, "Deep work intervals with ambient Pinterest focus gallery backdrops.")), /*#__PURE__*/React.createElement("div", {
+  }, "Deep work intervals with ambient focus gallery backdrops.")), /*#__PURE__*/React.createElement("div", {
     className: "text-center py-2"
   }, /*#__PURE__*/React.createElement("span", {
     className: `text-4xl font-black font-mono tracking-tight ${isLight ? 'text-slate-900' : 'text-white'}`
@@ -3337,7 +3346,7 @@ function App() {
     className: `text-2xl font-bold ${isLight ? 'text-slate-900' : 'text-white'}`
   }, t('productivityTimer')), /*#__PURE__*/React.createElement("p", {
     className: `text-xs mt-1 ${isLight ? 'text-slate-500' : 'text-slate-400'}`
-  }, "Deep work interval timer themed with curated Pinterest aesthetic study wallpapers.")), /*#__PURE__*/React.createElement("div", {
+  }, "Deep work interval timer themed with curated aesthetic study wallpapers.")), /*#__PURE__*/React.createElement("div", {
     className: "flex items-center gap-2"
   }, /*#__PURE__*/React.createElement("button", {
     onClick: toggleFullscreenTimer,
@@ -3396,7 +3405,7 @@ function App() {
     className: "flex justify-between items-center"
   }, /*#__PURE__*/React.createElement("h3", {
     className: `text-xs font-bold uppercase tracking-wider ${isLight ? 'text-slate-800' : 'text-white'}`
-  }, "Pinterest Aesthetic Focus Backdrops"), /*#__PURE__*/React.createElement("span", {
+  }, "Aesthetic Focus Backdrops"), /*#__PURE__*/React.createElement("span", {
     className: "text-[10px] font-mono text-slate-400"
   }, "Click to Switch Backdrop")), /*#__PURE__*/React.createElement("div", {
     className: "grid grid-cols-2 sm:grid-cols-4 gap-3"
