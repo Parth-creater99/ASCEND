@@ -2498,25 +2498,15 @@ function App() {
       className: `text-[11px] font-mono tracking-wide ${isLight ? 'text-slate-500' : 'text-slate-400'}`
     }, "Life RPG & Academic Operating System"))), /*#__PURE__*/React.createElement("div", {
       className: "flex items-center gap-3"
-    }, /*#__PURE__*/React.createElement("select", {
-      value: language,
-      onChange: e => setLanguage(e.target.value),
-      className: `px-3 py-1.5 rounded-xl text-xs font-semibold border backdrop-blur-md focus:outline-none ${isLight ? 'bg-white border-slate-300 text-slate-800' : 'bg-slate-900/80 border-white/10 text-white'}`
-    }, /*#__PURE__*/React.createElement("option", {
-      value: "en"
-    }, "English"), /*#__PURE__*/React.createElement("option", {
-      value: "hi"
-    }, "à¤¹à¤¿à¤¨à¥à¤¦à¥€"), /*#__PURE__*/React.createElement("option", {
-      value: "es"
-    }, "EspaÃ±ol"), /*#__PURE__*/React.createElement("option", {
-      value: "ja"
-    }, "æ—¥æœ¬èªž"), /*#__PURE__*/React.createElement("option", {
-      value: "fr"
-    }, "FranÃ§ais"), /*#__PURE__*/React.createElement("option", {
-      value: "de"
-    }, "Deutsch"), /*#__PURE__*/React.createElement("option", {
-      value: "ru"
-    }, "Ð ÑƒÑÑÐºÐ¸Ð¹")), /*#__PURE__*/React.createElement("button", {
+    }, /*#__PURE__*/React.createElement("button", {
+      onClick: () => {
+        if (confirm('Are you sure you want to log out?')) {
+          setUser(null);
+          window.location.reload();
+        }
+      },
+      className: `hidden sm:block px-4 py-1.5 rounded-2xl text-xs font-bold border transition-colors ${isLight ? 'bg-red-50 text-red-600 border-red-200 hover:bg-red-100' : 'bg-red-500/10 text-red-400 border-red-500/20 hover:bg-red-500/30'}`
+    }, "Logout"), /*#__PURE__*/React.createElement("button", {
       onClick: () => {
         setColorMode(isLight ? 'dark' : 'light');
         playAudio('click');
@@ -2832,42 +2822,15 @@ function App() {
     className: "animate-float-xp text-[11px] font-black font-mono text-emerald-400 bg-emerald-500/20 px-2 py-0.5 rounded-lg shrink-0"
   }, floatingXp.text))), /*#__PURE__*/React.createElement("div", {
     className: "flex items-center gap-3 shrink-0"
-  }, /*#__PURE__*/React.createElement("select", {
-    value: language,
-    onChange: e => setLanguage(e.target.value),
-    className: `hidden sm:block px-3 py-1.5 rounded-2xl border text-xs font-bold focus:outline-none transition ${isLight ? 'bg-white border-slate-200 text-slate-700' : 'bg-slate-900/80 border-white/10 text-slate-200'}`,
-    title: "Choose Language / à¤­à¤¾à¤·à¤¾ à¤¨à¤¿à¤µà¤¡à¤¾"
-  }, /*#__PURE__*/React.createElement("option", {
-    value: "en"
-  }, "English (EN)"), /*#__PURE__*/React.createElement("option", {
-    value: "mr"
-  }, "à¤®à¤°à¤¾à¤ à¥€ (Marathi)"), /*#__PURE__*/React.createElement("option", {
-    value: "hi"
-  }, "à¤¹à¤¿à¤¨à¥à¤¦à¥€ (Hindi)"), /*#__PURE__*/React.createElement("option", {
-    value: "te"
-  }, "à°¤à±†à°²à±à°—à± (Telugu)"), /*#__PURE__*/React.createElement("option", {
-    value: "ta"
-  }, "à®¤à®®à®¿à®´à¯ (Tamil)"), /*#__PURE__*/React.createElement("option", {
-    value: "bn"
-  }, "à¦¬à¦¾à¦‚à¦²à¦¾ (Bengali)"), /*#__PURE__*/React.createElement("option", {
-    value: "gu"
-  }, "àª—à«àªœàª°àª¾àª¤à«€ (Gujarati)"), /*#__PURE__*/React.createElement("option", {
-    value: "kn"
-  }, "à²•à²¨à³à²¨à²¡ (Kannada)"), /*#__PURE__*/React.createElement("option", {
-    value: "ml"
-  }, "à´®à´²à´¯à´¾à´³à´‚ (Malayalam)"), /*#__PURE__*/React.createElement("option", {
-    value: "pa"
-  }, "à¨ªà©°à¨œà¨¾à¨¬à©€ (Punjabi)"), /*#__PURE__*/React.createElement("option", {
-    value: "ja"
-  }, "æ—¥æœ¬èªž (Japanese)"), /*#__PURE__*/React.createElement("option", {
-    value: "es"
-  }, "EspaÃ±ol (Spanish)"), /*#__PURE__*/React.createElement("option", {
-    value: "fr"
-  }, "FranÃ§ais (French)"), /*#__PURE__*/React.createElement("option", {
-    value: "de"
-  }, "Deutsch (German)"), /*#__PURE__*/React.createElement("option", {
-    value: "ru"
-  }, "Ð ÑƒÑÑÐºÐ¸Ð¹ (Russian)")), /*#__PURE__*/React.createElement("div", {
+  }, /*#__PURE__*/React.createElement("button", {
+      onClick: () => {
+        if (confirm('Are you sure you want to log out?')) {
+          setUser(null);
+          window.location.reload();
+        }
+      },
+      className: `hidden sm:block px-4 py-1.5 rounded-2xl text-xs font-bold border transition-colors ${isLight ? 'bg-red-50 text-red-600 border-red-200 hover:bg-red-100' : 'bg-red-500/10 text-red-400 border-red-500/20 hover:bg-red-500/30'}`
+    }, "Logout"), /*#__PURE__*/React.createElement("div", {
     className: `flex items-center gap-2 px-3 py-1.5 rounded-2xl font-mono shadow-sm ${isLight ? 'bg-orange-50 text-orange-900' : 'bg-orange-950/40 text-orange-400'}`
   }, /*#__PURE__*/React.createElement(Icons.Flame, {
     className: "w-4 h-4 text-orange-400 animate-pulse"
