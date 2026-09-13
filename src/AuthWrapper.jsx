@@ -79,8 +79,8 @@ export default function AuthWrapper() {
 
         <form onSubmit={handleSubmit} className="flex flex-col gap-4">
           <input
-            type="text"
-            placeholder="Username"
+            type="email"
+            placeholder="Email Address"
             value={username}
             onChange={e => setUsername(e.target.value)}
             className="px-4 py-3 bg-black/50 border border-white/10 rounded-xl text-white outline-none focus:border-cyan-500/50 transition font-mono"
