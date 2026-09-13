@@ -33,9 +33,18 @@ export const connectDB = async () => {
         value JSONB NOT NULL,
         UNIQUE(user_id, key)
       );
+      CREATE TABLE IF NOT EXISTS friendships (
+        id SERIAL PRIMARY KEY,
+        requester_id INTEGER REFERENCES users(id),
+        recipient_id INTEGER REFERENCES users(id),
+        status VARCHAR(20) DEFAULT 'pending',
+        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+        UNIQUE(requester_id, recipient_id)
+      );
     `);
     client.release();
   } catch (err) {
     console.error("Failed to connect to PostgreSQL or create tables", err);
   }
 };
+

@@ -36,25 +36,16 @@ export default function AuthWrapper() {
     setError('');
     
     try {
-      // Simulate high-tech authentication delay
-      await new Promise(r => setTimeout(r, 1200));
-      
-      const userKey = 'ascend_user_account_' + username;
-      
-      if (isLogin) {
-        const storedPass = localStorage.getItem(userKey);
-        if (!storedPass || storedPass !== password) {
-          throw new Error('AUTH_REJECTED: Invalid credentials or record not found.');
-        }
-      } else {
-        const storedPass = localStorage.getItem(userKey);
-        if (storedPass) {
-          throw new Error('AUTH_CONFLICT: This email is already registered in the system.');
-        }
-        localStorage.setItem(userKey, password);
-      }
-      
-      handleLogin('local_token_' + Date.now(), username);
+      const apiUrl = import.meta.env.VITE_API_URL || '';
+      const endpoint = isLogin ? '/api/auth/login' : '/api/auth/register';
+      const res = await fetch(apiUrl + endpoint, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ username, password })
+      });
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.message || 'AUTH_REJECTED: Authentication failed');
+      handleLogin(data.token, data.username);
     } catch (err) {
       setError(err.message);
     } finally {
@@ -101,11 +92,11 @@ export default function AuthWrapper() {
 
           <form onSubmit={handleSubmit} className="flex flex-col gap-5">
             <div className="space-y-1">
-              <label className="text-[10px] font-mono text-slate-400 uppercase tracking-wider ml-1">Email Address</label>
+              <label className="text-[10px] font-mono text-slate-400 uppercase tracking-wider ml-1">Username</label>
               <div className="relative">
                 <input
-                  type="email"
-                  placeholder="commander@ascend.os"
+                  type="text"
+                  placeholder="commander"
                   value={username}
                   onChange={e => setUsername(e.target.value)}
                   className="w-full px-4 py-3.5 bg-black/40 border border-white/10 rounded-xl text-white placeholder-slate-600 outline-none focus:border-cyan-500/50 focus:ring-1 focus:ring-cyan-500/50 transition-all font-mono text-sm"

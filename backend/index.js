@@ -106,6 +106,89 @@ app.post('/api/store/:key', protect, async (req, res) => {
   }
 });
 
+
+// ---------------------------------------------------------
+// FRIENDSHIP ROUTES (Secured by JWT)
+// ---------------------------------------------------------
+
+app.post('/api/friends/request', protect, async (req, res) => {
+  const { username } = req.body;
+  if (!username) return res.status(400).json({ message: 'Target username required' });
+  
+  try {
+    const { rows: targets } = await pool.query('SELECT id FROM users WHERE username = $1', [username]);
+    if (targets.length === 0) return res.status(404).json({ message: 'User not found' });
+    
+    const targetId = targets[0].id;
+    if (targetId === req.user.id) return res.status(400).json({ message: 'Cannot add yourself' });
+
+    await pool.query(
+      `INSERT INTO friendships (requester_id, recipient_id, status)
+       VALUES ($1, $2, 'pending')
+       ON CONFLICT (requester_id, recipient_id) DO NOTHING`,
+      [req.user.id, targetId]
+    );
+    res.json({ success: true, message: 'Request sent' });
+  } catch (error) {
+    res.status(500).json({ message: String(error) });
+  }
+});
+
+app.get('/api/friends/pending', protect, async (req, res) => {
+  try {
+    const { rows } = await pool.query(
+      `SELECT f.id, u.username as requester_username
+       FROM friendships f
+       JOIN users u ON f.requester_id = u.id
+       WHERE f.recipient_id = $1 AND f.status = 'pending'`,
+      [req.user.id]
+    );
+    res.json({ requests: rows });
+  } catch (error) {
+    res.status(500).json({ message: String(error) });
+  }
+});
+
+app.post('/api/friends/accept', protect, async (req, res) => {
+  const { request_id } = req.body;
+  try {
+    await pool.query(
+      `UPDATE friendships SET status = 'accepted'
+       WHERE id = $1 AND recipient_id = $2`,
+      [request_id, req.user.id]
+    );
+    // Auto-create reverse relationship
+    const { rows: fRows } = await pool.query('SELECT requester_id FROM friendships WHERE id = $1', [request_id]);
+    if (fRows.length > 0) {
+      const requesterId = fRows[0].requester_id;
+      await pool.query(
+        `INSERT INTO friendships (requester_id, recipient_id, status)
+         VALUES ($1, $2, 'accepted')
+         ON CONFLICT (requester_id, recipient_id) DO UPDATE SET status = 'accepted'`,
+        [req.user.id, requesterId]
+      );
+    }
+    res.json({ success: true, message: 'Request accepted' });
+  } catch (error) {
+    res.status(500).json({ message: String(error) });
+  }
+});
+
+app.get('/api/friends', protect, async (req, res) => {
+  try {
+    const { rows } = await pool.query(
+      `SELECT u.username
+       FROM friendships f
+       JOIN users u ON f.recipient_id = u.id
+       WHERE f.requester_id = $1 AND f.status = 'accepted'`,
+      [req.user.id]
+    );
+    res.json({ friends: rows.map(r => r.username) });
+  } catch (error) {
+    res.status(500).json({ message: String(error) });
+  }
+});
+
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   console.log(`Backend running on http://localhost:${PORT}`);
