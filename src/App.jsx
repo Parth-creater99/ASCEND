@@ -606,18 +606,18 @@ const THEMES = [{
   accentGlow: 'rgba(139, 92, 246, 0.40)',
   bannerGradient: 'from-violet-950/80 via-indigo-950/80 to-slate-950/90',
   strokeColor: '#a855f7',
-  heroImage: 'https://images.unsplash.com/photo-1578632767115-351597cf2477?auto=format&fit=crop&w=1200&q=80',
-  avatarImage: 'https://images.unsplash.com/photo-1563089145-599997674d42?auto=format&fit=crop&w=400&q=80',
+  heroImage: '/themes/solo_leveling_hero.jpg',
+  avatarImage: '/themes/solo_leveling_hero.jpg',
   tagline: 'Arise. Turn daily discipline into unstoppable sovereign power.',
   timerWallpapers: [{
     title: 'Sung Jin-Woo Shadow Throne',
-    url: 'https://images.unsplash.com/photo-1578632767115-351597cf2477?auto=format&fit=crop&w=1600&q=80'
+    url: '/themes/solo_leveling_hero.jpg'
   }, {
     title: 'Shadow Monarch Extraction',
-    url: 'https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1600&q=80'
+    url: '/themes/solo_leveling_hero.jpg'
   }, {
     title: 'Demon Castle Monarch Gate',
-    url: 'https://images.unsplash.com/photo-1514565131-fce0801e5785?auto=format&fit=crop&w=1600&q=80'
+    url: '/themes/solo_leveling_hero.jpg'
   }]
 }, {
   id: 'aot',
@@ -629,18 +629,18 @@ const THEMES = [{
   accentGlow: 'rgba(16, 185, 129, 0.40)',
   bannerGradient: 'from-emerald-950/80 via-stone-900/80 to-slate-950/90',
   strokeColor: '#10b981',
-  heroImage: 'https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1200&q=80',
-  avatarImage: 'https://images.unsplash.com/photo-1533158326339-7f3cf2404354?auto=format&fit=crop&w=400&q=80',
+  heroImage: '/themes/aot_hero.jpg',
+  avatarImage: '/themes/aot_hero.jpg',
   tagline: 'Dedicate your heart. Fight beyond the walls of comfort into mastery.',
   timerWallpapers: [{
     title: 'Scout Regiment Shiganshina Watch',
-    url: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1600&q=80'
+    url: '/themes/aot_hero.jpg'
   }, {
     title: 'Forest of Giant Trees - Levi Ambush',
-    url: 'https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=1600&q=80'
+    url: '/themes/aot_hero.jpg'
   }, {
     title: 'Wall Maria Alpine Dawn Watch',
-    url: 'https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1600&q=80'
+    url: '/themes/aot_hero.jpg'
   }]
 }, {
   id: 'naruto',
@@ -652,18 +652,18 @@ const THEMES = [{
   accentGlow: 'rgba(249, 115, 22, 0.40)',
   bannerGradient: 'from-orange-950/80 via-amber-950/70 to-slate-950/90',
   strokeColor: '#f97316',
-  heroImage: 'https://images.unsplash.com/photo-1503899036084-c55cdd92da26?auto=format&fit=crop&w=1200&q=80',
-  avatarImage: 'https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=400&q=80',
+  heroImage: '/themes/naruto_hero.jpg',
+  avatarImage: '/themes/naruto_hero.jpg',
   tagline: 'Never give up your ninja way. Step by step, mastery becomes absolute.',
   timerWallpapers: [{
     title: 'Hidden Leaf Hokage Meditation Grove',
-    url: 'https://images.unsplash.com/photo-1503899036084-c55cdd92da26?auto=format&fit=crop&w=1600&q=80'
+    url: '/themes/naruto_hero.jpg'
   }, {
     title: 'Mount Myoboku Sage Waterfalls',
-    url: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&q=80'
+    url: '/themes/naruto_hero.jpg'
   }, {
     title: 'Golden Sunrise Rasengan Dojo',
-    url: 'https://images.unsplash.com/photo-1492571350019-22de08371fd3?auto=format&fit=crop&w=1600&q=80'
+    url: '/themes/naruto_hero.jpg'
   }]
 }, {
   id: 'jjk',
@@ -675,18 +675,18 @@ const THEMES = [{
   accentGlow: 'rgba(6, 182, 212, 0.40)',
   bannerGradient: 'from-cyan-950/80 via-indigo-950/80 to-slate-950/90',
   strokeColor: '#06b6d4',
-  heroImage: 'https://images.unsplash.com/photo-1506703719100-a0f3a48c0f86?auto=format&fit=crop&w=1200&q=80',
-  avatarImage: 'https://images.unsplash.com/photo-1563089145-599997674d42?auto=format&fit=crop&w=400&q=80',
+  heroImage: '/themes/jjk_hero.jpg',
+  avatarImage: '/themes/jjk_hero.jpg',
   tagline: 'Throughout Heaven and Earth, I alone am the honored one.',
   timerWallpapers: [{
     title: 'Infinite Void Cosmic Horizon',
-    url: 'https://images.unsplash.com/photo-1506703719100-a0f3a48c0f86?auto=format&fit=crop&w=1600&q=80'
+    url: '/themes/jjk_hero.jpg'
   }, {
     title: 'Tokyo Jujutsu High Sanctuary',
-    url: 'https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=1600&q=80'
+    url: '/themes/jjk_hero.jpg'
   }, {
     title: 'Cursed Technique Blue Resonance',
-    url: 'https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1600&q=80'
+    url: '/themes/jjk_hero.jpg'
   }]
 }, {
   id: 'demon_slayer',
@@ -698,18 +698,18 @@ const THEMES = [{
   accentGlow: 'rgba(225, 29, 72, 0.40)',
   bannerGradient: 'from-rose-950/80 via-amber-950/70 to-slate-950/90',
   strokeColor: '#e11d48',
-  heroImage: 'https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?auto=format&fit=crop&w=1200&q=80',
-  avatarImage: 'https://images.unsplash.com/photo-1618336753974-aae8e04506aa?auto=format&fit=crop&w=400&q=80',
+  heroImage: '/themes/demon_slayer_hero.jpg',
+  avatarImage: '/themes/demon_slayer_hero.jpg',
   tagline: 'No matter how devastating the blow, stand tall and let your blade burn bright.',
   timerWallpapers: [{
     title: 'Mount Sagiri Snow Peaks',
-    url: 'https://images.unsplash.com/photo-1491555103944-7c647fd857e6?auto=format&fit=crop&w=1600&q=80'
+    url: '/themes/demon_slayer_hero.jpg'
   }, {
     title: 'Hinokami Solar Flame Forge',
-    url: 'https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?auto=format&fit=crop&w=1600&q=80'
+    url: '/themes/demon_slayer_hero.jpg'
   }, {
     title: 'Wisteria Moonlit Sanctuary',
-    url: 'https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=1600&q=80'
+    url: '/themes/demon_slayer_hero.jpg'
   }]
 }, {
   id: 'dragonball',
@@ -721,18 +721,18 @@ const THEMES = [{
   accentGlow: 'rgba(56, 189, 248, 0.40)',
   bannerGradient: 'from-sky-950/80 via-purple-950/70 to-slate-950/90',
   strokeColor: '#38bdf8',
-  heroImage: 'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80',
-  avatarImage: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=400&q=80',
+  heroImage: '/themes/dragonball_hero.jpg',
+  avatarImage: '/themes/dragonball_hero.jpg',
   tagline: 'Break every limit. Flow through academic challenges with pure mastery.',
   timerWallpapers: [{
     title: 'Tournament of Power Silver Nebula',
-    url: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1600&q=80'
+    url: '/themes/dragonball_hero.jpg'
   }, {
     title: 'Divine Ultra Instinct Aura Void',
-    url: 'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1600&q=80'
+    url: '/themes/dragonball_hero.jpg'
   }, {
     title: 'Kami Lookout Sanctuary',
-    url: 'https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1600&q=80'
+    url: '/themes/dragonball_hero.jpg'
   }]
 }, {
   id: 'death_note',
@@ -744,18 +744,18 @@ const THEMES = [{
   accentGlow: 'rgba(148, 163, 184, 0.35)',
   bannerGradient: 'from-slate-950 via-stone-950 to-black',
   strokeColor: '#cbd5e1',
-  heroImage: 'https://images.unsplash.com/photo-1481627834876-b7833e8f5570?auto=format&fit=crop&w=1200&q=80',
-  avatarImage: 'https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=400&q=80',
+  heroImage: '/themes/death_note_hero.jpg',
+  avatarImage: '/themes/death_note_hero.jpg',
   tagline: 'Knowledge is the ultimate authority. Methodical deduction conquers all.',
   timerWallpapers: [{
     title: 'Gothic Classical Archive',
-    url: 'https://images.unsplash.com/photo-1481627834876-b7833e8f5570?auto=format&fit=crop&w=1600&q=80'
+    url: '/themes/death_note_hero.jpg'
   }, {
     title: 'Midnight Deduction Chambers',
-    url: 'https://images.unsplash.com/photo-1457369804613-52c61a468e7d?auto=format&fit=crop&w=1600&q=80'
+    url: '/themes/death_note_hero.jpg'
   }, {
     title: 'Rainy Noir Study Desk',
-    url: 'https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&w=1600&q=80'
+    url: '/themes/death_note_hero.jpg'
   }]
 }, {
   id: 'spiderman',
@@ -767,18 +767,18 @@ const THEMES = [{
   accentGlow: 'rgba(239, 68, 68, 0.40)',
   bannerGradient: 'from-red-950/80 via-blue-950/70 to-slate-950/90',
   strokeColor: '#ef4444',
-  heroImage: 'https://images.unsplash.com/photo-1635805737707-575885ab0820?auto=format&fit=crop&w=1200&q=80',
-  avatarImage: 'https://images.unsplash.com/photo-1604200213928-ba3cf4fc8436?auto=format&fit=crop&w=400&q=80',
+  heroImage: '/themes/spiderman_hero.jpg',
+  avatarImage: '/themes/spiderman_hero.jpg',
   tagline: 'Anyone can wear the mask. How you level up defines the hero you become.',
   timerWallpapers: [{
     title: 'Into the Spider-Verse Skyline',
-    url: 'https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&w=1600&q=80'
+    url: '/themes/spiderman_hero.jpg'
   }, {
     title: 'Brooklyn Night Heights',
-    url: 'https://images.unsplash.com/photo-1506146332389-18140dc7b2fb?auto=format&fit=crop&w=1600&q=80'
+    url: '/themes/spiderman_hero.jpg'
   }, {
     title: 'Neon Cyber Tokyo Rain',
-    url: 'https://images.unsplash.com/photo-1514565131-fce0801e5785?auto=format&fit=crop&w=1600&q=80'
+    url: '/themes/spiderman_hero.jpg'
   }]
 }, {
   id: 'ironman',
@@ -790,18 +790,18 @@ const THEMES = [{
   accentGlow: 'rgba(245, 158, 11, 0.40)',
   bannerGradient: 'from-amber-950/80 via-rose-950/70 to-slate-950/90',
   strokeColor: '#f59e0b',
-  heroImage: 'https://images.unsplash.com/photo-1635863138275-d9b33299680b?auto=format&fit=crop&w=1200&q=80',
-  avatarImage: 'https://images.unsplash.com/photo-1635863138275-d9b33299680b?auto=format&fit=crop&w=400&q=80',
+  heroImage: 'https://images.unsplash.com/photo-1635805737707-575885ab0820?auto=format&fit=crop&w=1200&q=80,
+  avatarImage: 'https://images.unsplash.com/photo-1635805737707-575885ab0820?auto=format&fit=crop&w=1200&q=80,
   tagline: 'I am Iron Man. Relentless engineering, real-world execution.',
   timerWallpapers: [{
     title: 'Stark Hologram Laboratory',
-    url: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1600&q=80'
+    url: 'https://images.unsplash.com/photo-1635805737707-575885ab0820?auto=format&fit=crop&w=1200&q=80
   }, {
     title: 'Quantum Arc Reactor Core',
-    url: 'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1600&q=80'
+    url: 'https://images.unsplash.com/photo-1635805737707-575885ab0820?auto=format&fit=crop&w=1200&q=80
   }, {
     title: 'Quantum Tech Workshop',
-    url: 'https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1600&q=80'
+    url: 'https://images.unsplash.com/photo-1635805737707-575885ab0820?auto=format&fit=crop&w=1200&q=80
   }]
 }, {
   id: 'synth_statue',
@@ -813,18 +813,18 @@ const THEMES = [{
   accentGlow: 'rgba(236, 72, 153, 0.40)',
   bannerGradient: 'from-pink-950/80 via-cyan-950/70 to-slate-950/90',
   strokeColor: '#ec4899',
-  heroImage: 'https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1200&q=80',
-  avatarImage: 'https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?auto=format&fit=crop&w=400&q=80',
+  heroImage: '/themes/synth_statue_hero.jpg',
+  avatarImage: '/themes/synth_statue_hero.jpg',
   tagline: 'Sculpt your intellect like marble in the neon horizon.',
   timerWallpapers: [{
     title: 'Vaporwave Twilight Pantheon',
-    url: 'https://images.unsplash.com/photo-1506703719100-a0f3a48c0f86?auto=format&fit=crop&w=1600&q=80'
+    url: '/themes/synth_statue_hero.jpg'
   }, {
     title: 'Neon Classical Temple Horizon',
-    url: 'https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&w=1600&q=80'
+    url: '/themes/synth_statue_hero.jpg'
   }, {
     title: 'Cyber Twilight Pantheon',
-    url: 'https://images.unsplash.com/photo-1514565131-fce0801e5785?auto=format&fit=crop&w=1600&q=80'
+    url: '/themes/synth_statue_hero.jpg'
   }]
 }, {
   id: 'cyberpunk',
@@ -836,18 +836,18 @@ const THEMES = [{
   accentGlow: 'rgba(234, 179, 8, 0.40)',
   bannerGradient: 'from-yellow-950/80 via-cyan-950/70 to-slate-950/90',
   strokeColor: '#eab308',
-  heroImage: 'https://images.unsplash.com/photo-1506146332389-18140dc7b2fb?auto=format&fit=crop&w=1200&q=80',
-  avatarImage: 'https://images.unsplash.com/photo-1514565131-fce0801e5785?auto=format&fit=crop&w=400&q=80',
+  heroImage: '/themes/cyberpunk_hero.jpg',
+  avatarImage: '/themes/cyberpunk_hero.jpg',
   tagline: 'Wake up, samurai. We have an empire of knowledge to build.',
   timerWallpapers: [{
     title: 'Night City Megabuilding Neon Rain',
-    url: 'https://images.unsplash.com/photo-1514565131-fce0801e5785?auto=format&fit=crop&w=1600&q=80'
+    url: '/themes/cyberpunk_hero.jpg'
   }, {
     title: 'Night City Skyline Horizon',
-    url: 'https://images.unsplash.com/photo-1506146332389-18140dc7b2fb?auto=format&fit=crop&w=1600&q=80'
+    url: '/themes/cyberpunk_hero.jpg'
   }, {
     title: 'Cyber Highway at Twilight',
-    url: 'https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&w=1600&q=80'
+    url: '/themes/cyberpunk_hero.jpg'
   }]
 }];
 const DISCIPLINE_CONFIG = {
