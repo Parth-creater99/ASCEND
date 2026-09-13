@@ -1090,7 +1090,7 @@ function CircularGauge({
 // 5. MAIN ASCEND COMPONENT
 // ==========================================
 function App() {
-  const [view, setView] = useState('app');
+  const [view, setView] = useState('cover');
   const [tab, setTab] = useState('dashboard');
   const [isLoaded, setIsLoaded] = useState(false);
 
@@ -1111,7 +1111,7 @@ function App() {
     level: 1,
     totalXp: 0,
     points: 0,
-    isEnrolled: true
+    isEnrolled: false
   });
   const [streak, setStreak] = useState({
     count: 1,
